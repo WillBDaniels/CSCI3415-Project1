@@ -1,1 +1,4 @@
 /.nb-gradle/private/
+/build/
+/.gradle/
+/Zipped_Builds/

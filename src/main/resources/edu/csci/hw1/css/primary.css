@@ -1,0 +1,19 @@
+/* 
+    Created on : May 14, 2014, 4:07:27 PM
+    Author     : William
+*/
+.good{
+    -fx-background-color: green,linear-gradient(to bottom, derive(green,60%) 5%,derive(green,90%) 40%);
+}
+
+
+.bad{
+    -fx-background-color: red,linear-gradient(to bottom, derive(red,60%) 5%,derive(red,90%) 40%);
+}
+#error_txt
+{
+    -fx-background-color: #091928;
+    -fx-text-fill:red; 
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
