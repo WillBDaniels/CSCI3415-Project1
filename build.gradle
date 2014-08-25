@@ -1,0 +1,102 @@
+apply from: 'javafx.plugin'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+
+
+sourceCompatibility = '1.8'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+def mainClassName = "edu.csci.hw1.Calculator"
+def mainAppName = "Simple Java Calculator"
+def versionNumber = "1.0"
+jfxJar.enabled = false;
+jfxCopyLibs.enabled = false;
+
+
+dependencies {
+    testCompile 'junit:junit:4.11'
+}
+repositories {
+    mavenCentral()
+}
+task wrapper(type: Wrapper){
+    gradleVersion = '2.1'
+}
+tasks.withType(Compile) {
+    options.encoding = 'UTF-8'
+}
+javafx {
+    appID '{C15A6650-A798-479A-B8F2-F83C6725BAB7}'
+    mainClass = mainClassName
+    appName = mainAppName
+
+    jvmArgs = ['-XX:+AggressiveOpts', '-XX:CompileThreshold=1']
+    arguments = ['-1', '--fast', '-Xlint:deprecation']
+    systemProperties = [ 'prism.disableRegionCaching':'true' ]
+    arguments = ['1AC', '1NC', '2AC', '2NC', '1NR', '1AR', '2NR', '2AR']
+
+    embedLauncher = true // caution: class-path not set and is overwritten if set to false
+
+    // applet and webstart stuff
+    width = 800
+    height = 600
+    embedJNLP = false
+    icons {
+        shortcut = ['icons/programLogo16.png', 'icons/programLogo32.png', 'icons/programLogo128.png']
+    }
+
+    // deplpy/info attributes
+    category = 'production'
+    description = 'This is a homework project for csci 3415'
+    licenseType = '3 clause BSD'
+    vendor = 'William Daniels'
+
+    // deploy/preferences attributes
+    installSystemWide = true
+    menu = true
+    shortcut = true
+
+    // app icons
+}
+jar{
+    from {configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    manifest{
+        attributes("Main-Class": mainClassName);
+    }
+}
+
+task docs(type:Exec) {
+    ext {
+        outputDir = file('build/docs')
+    }
+    if (System.getenv("PATH").toLowerCase().contains("doxygen")){
+        commandLine 'doxygen'
+        inputs.file file("Doxyfile");
+        inputs.files sourceSets.main.java, sourceSets.test.java
+        outputs.dir outputDir
+    }else{
+        System.out.println("I'm sorry, you need doxygen installed to run the program, \n"
+            + "please visit http://www.stack.nl/~dimitri/doxygen/download.html\n"
+            + "to download the lastest version of doxygen. ");
+    }
+}
+
+task copyFinalZip (type: Copy){
+    from ('build/distributions'){
+        include '*.zip'
+    }
+    into 'Zipped_Builds/'
+}
+
+task zipEverything(type: Zip){
+    baseName = mainAppName
+    classifier = versionNumber
+    from 'build/distributions/bundles/'
+}
+
+
+
+build.dependsOn (  assemble, zipEverything, copyFinalZip)
+task zipEverything.mustRunAfter ( assemble)
+task copyFinalZip.mustRunAfter  (zipEverything)
+task all (dependsOn: [build])
