@@ -65,21 +65,7 @@ jar{
     }
 }
 
-task docs(type:Exec) {
-    ext {
-        outputDir = file('build/docs')
-    }
-    if (System.getenv("PATH").toLowerCase().contains("doxygen")){
-        commandLine 'doxygen'
-        inputs.file file("Doxyfile");
-        inputs.files sourceSets.main.java, sourceSets.test.java
-        outputs.dir outputDir
-    }else{
-        System.out.println("I'm sorry, you need doxygen installed to run the program, \n"
-            + "please visit http://www.stack.nl/~dimitri/doxygen/download.html\n"
-            + "to download the lastest version of doxygen. ");
-    }
-}
+
 
 task copyFinalZip (type: Copy){
     from ('build/distributions'){

@@ -32,6 +32,23 @@ public class Primary_Controller {
         tf_expression.setEditable(false);
         tf_expression.setFocusTraversable(false);
         tf_result.setFocusTraversable(false);
+        if (!tf_expression.focusedProperty().get()){
+            vb_main_window.requestFocus();
+        }
+        tf_expression.focusedProperty().addListener((ChangeListener)->{
+            if (tf_expression.focusedProperty().get()){
+                vb_main_window.requestFocus();
+            }
+        });
+        tf_result.focusedProperty().addListener((ChangeListener)->{
+            if (tf_result.focusedProperty().get()){
+                vb_main_window.requestFocus();
+            }
+        });
+        /**
+         * Adding some various listeners to the text boxes for valid user input and the
+         * ability to simply start typing on the keyboard to enter valid input. 
+         */
         vb_main_window.setOnKeyReleased((KeyEvent e)->{
            if (e.getCode().equals(KeyCode.SHIFT)){ 
                 shiftDown = false;
@@ -70,7 +87,6 @@ public class Primary_Controller {
                 }
             }
         });
-
     }
 
     @FXML

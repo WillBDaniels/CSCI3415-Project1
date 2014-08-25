@@ -30,8 +30,8 @@ public class Calculator extends Application {
     public void start(final Stage stage) throws Exception {
        
         Parent root = FXMLLoader.load(getClass().getResource("fxml/primary_window.fxml"));
+        root.getStylesheets().add(getClass().getResource("css/primary.css").toExternalForm());
         Scene scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("css/primary.css").toExternalForm());
         stage.setScene(scene);
         stage.setTitle("Simple Java Calculator");
         stage.resizableProperty().not();
