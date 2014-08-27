@@ -16,6 +16,8 @@ import javafx.stage.FileChooser;
  */
 public class Primary_Controller {
     private boolean shiftDown = false;
+    
+    private final Validation valid = new Validation();
     @FXML
     private VBox vb_main_window;
     
@@ -60,7 +62,6 @@ public class Primary_Controller {
                     tf_expression.setText(tf_expression.getText().substring(0, tf_expression.getText().length() -1));
                 }
             }else{
-                Validation valid = new Validation();
                 KeyCode temp;
                 String output;
                 if (shiftDown){
@@ -73,6 +74,12 @@ public class Primary_Controller {
                     }else if(e.getCode().equals(KeyCode.DIGIT0)){
                         temp = KeyCode.RIGHT_PARENTHESIS;
                         output = ")";
+                    }else if (e.getCode().equals(KeyCode.DIGIT6)){
+                        temp = KeyCode.CIRCUMFLEX;
+                        output = "^";
+                    }else if (e.getCode().equals(KeyCode.DIGIT8)){
+                        temp = KeyCode.ASTERISK;
+                        output = "*";
                     }else{
                         temp = e.getCode();
                         output = e.getText();
@@ -82,8 +89,15 @@ public class Primary_Controller {
                     output = e.getText();
                 }
                 shiftDown = e.isShiftDown();
-                if (valid.validateKeyStroke(temp)){
+                if (valid.validateKeyStroke(temp) && valid.validateOrder(tf_expression.getText(), output)){
                     tf_expression.setText(tf_expression.getText() + output);
+                }
+                if (!valid.parenMatcher(tf_expression.getText())){
+                    tf_expression.getStyleClass().removeAll("good", "bad");
+                    tf_expression.getStyleClass().addAll("bad");
+                }else{
+                    tf_expression.getStyleClass().removeAll("good", "bad");
+                    tf_expression.getStyleClass().addAll("good");
                 }
             }
         });
@@ -102,111 +116,159 @@ public class Primary_Controller {
 
     @FXML
     private void equal_pressed() {
-
+      if (!tf_expression.getStyleClass().contains("bad")){
+          Process_Expression expression = new Process_Expression();
+          double outputValue = expression.calculate_result(tf_expression.getText());
+          if (outputValue == 9999999999.0){
+              tf_result.setText("Not a Number (NaN)");
+          }else if (outputValue == -9999999999.0){
+              tf_result.setText("Infinity");
+          }else{
+            tf_result.setText(String.valueOf(outputValue));
+          }
+      }
     }
 
     @FXML
     private void left_paren_pressed() {
-        tf_expression.setText(tf_expression.getText() + "(");
-
+        if (valid.validateOrder(tf_expression.getText(), "(")){
+            tf_expression.setText(tf_expression.getText() + "(");
+        }
+        if (!valid.parenMatcher(tf_expression.getText())){
+            tf_expression.getStyleClass().removeAll("good", "bad");
+            tf_expression.getStyleClass().addAll("bad");
+        }else{
+            tf_expression.getStyleClass().removeAll("good", "bad");
+            tf_expression.getStyleClass().addAll("good");
+        }
     }
 
     @FXML
     private void right_paren_pressed() {
-        tf_expression.setText(tf_expression.getText() + ")");
+        if (valid.validateOrder(tf_expression.getText(), ")")){
+            tf_expression.setText(tf_expression.getText() + ")");
+        }
+        if (!valid.parenMatcher(tf_expression.getText())){
+            tf_expression.getStyleClass().removeAll("good", "bad");
+            tf_expression.getStyleClass().addAll("bad");
+        }else{
+            tf_expression.getStyleClass().removeAll("good", "bad");
+            tf_expression.getStyleClass().addAll("good");
+        }
 
     }
 
     @FXML
     private void plus_pressed() {
-        tf_expression.setText(tf_expression.getText() + "+");
+        if (valid.validateOrder(tf_expression.getText(), "+")){
+            tf_expression.setText(tf_expression.getText() + "+");
+        }
 
     }
 
     @FXML
     private void one_pressed() {
-        tf_expression.setText(tf_expression.getText() + "1");
-
+        if (valid.validateOrder(tf_expression.getText(), "1")){
+            tf_expression.setText(tf_expression.getText() + "1");
+        }
     }
 
     @FXML
     private void two_pressed() {
-        tf_expression.setText(tf_expression.getText() + "2");
-
+        if (valid.validateOrder(tf_expression.getText(), "2")){
+            tf_expression.setText(tf_expression.getText() + "2");
+        }
     }
 
     @FXML
     private void three_pressed() {
-        tf_expression.setText(tf_expression.getText() + "3");
-
+        if (valid.validateOrder(tf_expression.getText(), "3")){
+            tf_expression.setText(tf_expression.getText() + "3");
+        }
     }
 
     @FXML
     private void minus_pressed() {
-        tf_expression.setText(tf_expression.getText() + "-");
-
+        if (valid.validateOrder(tf_expression.getText(), "-")){
+            tf_expression.setText(tf_expression.getText() + "-");
+        }
     }
 
     @FXML
     private void four_pressed() {
-        tf_expression.setText(tf_expression.getText() + "4");
+        if (valid.validateOrder(tf_expression.getText(), "4")){
+            tf_expression.setText(tf_expression.getText() + "4");
+        }
     }
 
     @FXML
     private void five_pressed() {
-        tf_expression.setText(tf_expression.getText() + "5");
+        if (valid.validateOrder(tf_expression.getText(), "5")){
+            tf_expression.setText(tf_expression.getText() + "5");
+        }
     }
 
     @FXML
     private void six_pressed() {
-        tf_expression.setText(tf_expression.getText() + "6");
+        if (valid.validateOrder(tf_expression.getText(), "6")){
+            tf_expression.setText(tf_expression.getText() + "6");
+        }
     }
 
     @FXML
     private void slash_pressed() {
-        tf_expression.setText(tf_expression.getText() + "/");
-
+        if (valid.validateOrder(tf_expression.getText(), "/")){
+            tf_expression.setText(tf_expression.getText() + "/");
+        }
     }
 
     @FXML
     private void seven_pressed() {
-        tf_expression.setText(tf_expression.getText() + "7");
-
+        if (valid.validateOrder(tf_expression.getText(), "7")){
+            tf_expression.setText(tf_expression.getText() + "7");
+        }
     }
 
     @FXML
     private void eight_pressed() {
-        tf_expression.setText(tf_expression.getText() + "8");
-
+        if (valid.validateOrder(tf_expression.getText(), "8")){
+            tf_expression.setText(tf_expression.getText() + "8");
+        }
     }
 
     @FXML
     private void nine_pressed() {
-        tf_expression.setText(tf_expression.getText() + "9");
-
+        if (valid.validateOrder(tf_expression.getText(), "9")){
+            tf_expression.setText(tf_expression.getText() + "9");
+        }
     }
 
     @FXML
     private void star_pressed() {
-        tf_expression.setText(tf_expression.getText() + "*");
-
+        if (valid.validateOrder(tf_expression.getText(), "*")){
+            tf_expression.setText(tf_expression.getText() + "*");
+        }
     }
 
     @FXML
     private void zero_pressed() {
-        tf_expression.setText(tf_expression.getText() + "0");
-
+        if (valid.validateOrder(tf_expression.getText(), "0")){
+            tf_expression.setText(tf_expression.getText() + "0");
+        }
     }
 
     @FXML
     private void period_pressed() {
-        tf_expression.setText(tf_expression.getText() + ".");
-
+        if (valid.validateOrder(tf_expression.getText(), ".")){
+            tf_expression.setText(tf_expression.getText() + ".");
+        }
     }
 
     @FXML
     private void carat_pressed() {
-        tf_expression.setText(tf_expression.getText() + "^");
+        if (valid.validateOrder(tf_expression.getText(), "^")){
+            tf_expression.setText(tf_expression.getText() + "^");
+        }
     }
     
     @FXML
@@ -231,7 +293,9 @@ public class Primary_Controller {
     
     @FXML
     private void back_pressed(){
-        tf_expression.setText(tf_expression.getText().substring(0,tf_expression.getText().length()-1));
+        if (tf_expression.getText().length() > 0){
+            tf_expression.setText(tf_expression.getText().substring(0,tf_expression.getText().length()-1));
+        }
     }
 
 }

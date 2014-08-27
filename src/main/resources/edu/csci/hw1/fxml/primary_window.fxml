@@ -18,7 +18,7 @@
                 <Menu mnemonicParsing="false" text="Edit">
                     <items>
                         <MenuItem fx:id="mi_clear" mnemonicParsing="false" onAction="#clear_all" text="Clear All" />
-                        <MenuItem fx:id="mi_load" mnemonicParsing="false" onAction="#load_expression" text="Load File" />
+                        <MenuItem fx:id="mi_load" mnemonicParsing="false" visible ="false" onAction="#load_expression" text="Load File" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
