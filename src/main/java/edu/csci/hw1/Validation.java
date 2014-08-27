@@ -6,16 +6,31 @@ import java.util.List;
 import javafx.scene.input.KeyCode;
 
 /**
- *
+ *This class handles any and all of the actual validation of input from the user. namely, it
+ * validates input based off the past two terms, since they determine completely what is allowed. 
+ * 
  * 08-2014 
  * @author William
  */
 public class Validation {
+    
+    /**
+     * This is a list of all of our accepted keys the user can type at any time in the program. 
+     * If the user types something else, it will simply be ignored. 
+     */
     private final List<KeyCode> validKeys = new ArrayList(Arrays.asList(KeyCode.LEFT_PARENTHESIS, KeyCode.RIGHT_PARENTHESIS, KeyCode.PLUS
     , KeyCode.MINUS, KeyCode.EQUALS, KeyCode.SLASH, KeyCode.DIGIT1, KeyCode.DIGIT2,
     KeyCode.DIGIT3, KeyCode.DIGIT4, KeyCode.DIGIT5, KeyCode.DIGIT6, KeyCode.DIGIT7, KeyCode.DIGIT8, KeyCode.DIGIT9, 
     KeyCode.DIGIT0, KeyCode.ASTERISK, KeyCode.CIRCUMFLEX, KeyCode.PERIOD));
     
+    /**
+     * This method validates an individual keystroke being input by the user. 
+     * if the keystroke is not contained inside of our list, then false is returned, true
+     * otherwise. 
+     * 
+     * @param keyStroke the KeyCode object that corresponds to whatever the user happens to have typed. 
+     * @return true if the keystroke is in our list, and therefore valid, false otherwise. 
+     */
     public boolean validateKeyStroke(KeyCode keyStroke){
         if (keyStroke == KeyCode.BACK_SPACE){
             return true;
@@ -23,6 +38,18 @@ public class Validation {
        return validKeys.contains(keyStroke);
     }
     
+    
+    /**
+     * This method validates the current string in the window against the new (valid) 
+     * key that is being typed. This method contains a number of rules that follow basic
+     * mathematical expression rules. returns true if the key is valid in the current
+     * sequence of the expression, false otherwise. 
+     * 
+     * @param initialOrder the string before the new key gets added
+     * @param newItem the next item that is desired to be added, should have already
+     * been determined to be valid. 
+     * @return true if the key is valid within the existing order of the string, false otherwise. 
+     */
     public boolean validateOrder(String initialOrder, String newItem){
         if (initialOrder.length() < 1){
             return newItem.equals("(") || isNumeric(newItem);
@@ -83,7 +110,14 @@ public class Validation {
         return newItem.equals(")") || isNumeric(newItem);
     }
     
-    
+    /**
+     * This method counts the number of parenthesis in the program, and if the number
+     * of left parenthesis is greater than the number of right parenthesis, or vice versa,
+     * then the method returns false, true otherwise. 
+     * 
+     * @param input the string that we are counting parenthesis in. 
+     * @return true if the number of left and right parenthesis are equal, false otherwise. 
+     */
     public boolean parenMatcher(String input){
         int leftCount = 0;
         int rightCount = 0;
@@ -101,6 +135,12 @@ public class Validation {
         return leftCount == rightCount;
     }
     
+    /**
+     * This is simply some regex to check to see if a string is purely a number. 
+     * 
+     * @param str the String being input by the program. 
+     * @return true if the string is numeric entirely, false otherwise. 
+     */
     private boolean isNumeric(String str) {
         return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
     }

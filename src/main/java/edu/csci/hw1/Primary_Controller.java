@@ -9,7 +9,11 @@ import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 
 /**
- *
+ * This is the main class that handles all of the interactions with the GUI. 
+ * This sparks off the various methods such as validation, evaluating the expression, 
+ * etc. etc. This class is strictly responsible for handling all of the interactions
+ * with the keyboard that force the user to only type accepted characters, as well as 
+ * only being able to type a valid expression. 
  * 08-2014
  *
  * @author William
@@ -18,22 +22,39 @@ public class Primary_Controller {
     private boolean shiftDown = false;
     
     private final Validation valid = new Validation();
+    
+    //This is the main window in the actual program
     @FXML
     private VBox vb_main_window;
     
+    //These are the two text fields that we'll be using in the project to hold the
+    //expression as well as the result. 
     @FXML
     private TextField tf_expression, tf_result;
     
 
     /**
-     * This is the main entry point into the calculator program .
+     * This is the main entry point into the calculator program . it initializes
+     * all of our listeners that grab things like keyboard input, etc. etc. It also
+     * sets some of the tab order, and makes sure that the text fields themselves 
+     * never come under focus, since there is a weird consume() bug where I was having
+     * a hard time consuming events when the text fields had focus. 
      */
     @FXML
     private void initialize() {
+        
+        //force the focus onto our main window. 
         vb_main_window.requestFocus();
+        
+        //make it so that both of the text fields are un-editable, and can't obtain
+        //focus. 
         tf_expression.setEditable(false);
         tf_expression.setFocusTraversable(false);
         tf_result.setFocusTraversable(false);
+        tf_result.setEditable(false);
+        
+        //These listeners make it so that if somehow the user manages to give the 
+        //text fields focus, it automatically shifts it back to the main window. 
         if (!tf_expression.focusedProperty().get()){
             vb_main_window.requestFocus();
         }
@@ -56,6 +77,10 @@ public class Primary_Controller {
                 shiftDown = false;
            }
         });
+        
+        //This is the primary listener that kicks off the keyboard-level validation. 
+        //Everything inside of this method should force the user to input nothing
+        //but valid mathematical expressions. 
         vb_main_window.setOnKeyPressed((KeyEvent e)->{
             if (e.getCode() == KeyCode.BACK_SPACE){
                 if (!tf_expression.getText().isEmpty()){
@@ -103,17 +128,30 @@ public class Primary_Controller {
         });
     }
 
+    /**
+     * 
+     * This method simply clears out both of the text fields. 
+     */
     @FXML
     private void clear_all() {
+        tf_result.setText("");
         tf_expression.setText("");
-
     }
 
+    
+    /**
+     * This method only clears out the expression window in case someone wants to 
+     * remember the answer from last time. 
+     */
     @FXML
     private void clear_one() {
         tf_expression.setText("");
     }
 
+    /**
+     * This method kicks off the evaluation of the actual expression. If the user 
+     * has typed an invalid number of parenthesis, then the calculation will not proceed. 
+     */
     @FXML
     private void equal_pressed() {
       if (!tf_expression.getStyleClass().contains("bad")){
@@ -129,6 +167,11 @@ public class Primary_Controller {
       }
     }
 
+    /**
+     * This method adds a left parenthesis to the screen when the corresponding button
+     * is pressed. if the user has entered more left than right parenthesis, the window
+     * turns red. 
+     */
     @FXML
     private void left_paren_pressed() {
         if (valid.validateOrder(tf_expression.getText(), "(")){
