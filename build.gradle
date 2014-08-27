@@ -5,7 +5,6 @@ apply plugin: 'maven'
 
 
 sourceCompatibility = '1.8'
-[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 def mainClassName = "edu.csci.hw1.Calculator"
 def mainAppName = "Simple Java Calculator"
 def versionNumber = "1.0"
@@ -20,11 +19,9 @@ repositories {
     mavenCentral()
 }
 task wrapper(type: Wrapper){
-    gradleVersion = '2.1'
+    gradleVersion = '2.0'
 }
-tasks.withType(Compile) {
-    options.encoding = 'UTF-8'
-}
+
 javafx {
     appID '{C15A6650-A798-479A-B8F2-F83C6725BAB7}'
     mainClass = mainClassName

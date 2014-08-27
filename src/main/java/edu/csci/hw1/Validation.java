@@ -19,9 +19,12 @@ public class Validation {
      * If the user types something else, it will simply be ignored. 
      */
     private final List<KeyCode> validKeys = new ArrayList(Arrays.asList(KeyCode.LEFT_PARENTHESIS, KeyCode.RIGHT_PARENTHESIS, KeyCode.PLUS
-    , KeyCode.MINUS, KeyCode.EQUALS, KeyCode.SLASH, KeyCode.DIGIT1, KeyCode.DIGIT2,
+    , KeyCode.MINUS, KeyCode.SLASH, KeyCode.DIGIT1, KeyCode.DIGIT2,
     KeyCode.DIGIT3, KeyCode.DIGIT4, KeyCode.DIGIT5, KeyCode.DIGIT6, KeyCode.DIGIT7, KeyCode.DIGIT8, KeyCode.DIGIT9, 
     KeyCode.DIGIT0, KeyCode.ASTERISK, KeyCode.CIRCUMFLEX, KeyCode.PERIOD));
+    
+    private final List<String> validKeysStrings = new ArrayList(Arrays.asList("(", ")", "+", "-", "/", "1", "2"
+    , "3", "4", "5", "6", "7", "8", "9", "0", "*", "^", "."));
     
     /**
      * This method validates an individual keystroke being input by the user. 
@@ -52,11 +55,11 @@ public class Validation {
      */
     public boolean validateOrder(String initialOrder, String newItem){
         if (initialOrder.length() < 1){
-            return newItem.equals("(") || isNumeric(newItem);
+            return newItem.equals("(") || isNumeric(newItem) || newItem.equals("+") || newItem.equals("-");
         }
         String lastChar = initialOrder.substring(initialOrder.length()-1, initialOrder.length());
         String secondToLast = "0";
-        if (initialOrder.length() > 2){
+        if (initialOrder.length() > 1){
             secondToLast = initialOrder.substring(initialOrder.length()-2, initialOrder.length()-1);
         }
         //If the last thing typed was a number, we don't really care what comes next as 
@@ -105,8 +108,9 @@ public class Validation {
         if (lastChar.equals(")")){
             return !isNumeric(newItem);
         }
-        
-        
+        if (lastChar.equals("^") || lastChar.equals("*")){
+            return newItem.equals("(") || isNumeric(newItem) || newItem.equals("+") || newItem.equals("-");
+        }
         return newItem.equals(")") || isNumeric(newItem);
     }
     
@@ -122,18 +126,53 @@ public class Validation {
         int leftCount = 0;
         int rightCount = 0;
         
-        
         for (int i = 0; i < input.length(); i++){
             if (input.charAt(i) == '('){
                 leftCount ++;
             }
             if (input.charAt(i) == ')'){
                 rightCount++;
-            }
-            
+            }    
         }
         return leftCount == rightCount;
     }
+    
+    
+    /**
+     * This method is designed to be able to verify that a string passes our 
+     * requirements post-facto, and is able to evaluate a mathematical expression
+     * after it's been completely constructed. Essentially it virtually creates
+     * the expression one character at a time, just like would happen if the user
+     * typed it in by hand. 
+     * 
+     * @param input The input string being checked after it's already been constructed. 
+     * @return true if the entire expression is valid, false otherwise. 
+     */
+    public boolean validateEntireString(String input){
+        String temp, temp2;
+        if (input.length() == 0){
+            return true;
+        }
+        if (input.length() == 1){
+            if (validKeysStrings.contains(input)){
+                return true;
+            }
+        }
+        for (int i = 1; i < input.length()-1; i ++){
+            temp = input.substring(0, i);
+            temp2 = input.substring(i, i+1);
+            if (!validKeysStrings.contains(temp2)){
+                return false;
+            }
+            if (!validateOrder(temp, input.substring(i, i+1))){
+                return false;
+            }
+        }
+        
+        
+        return parenMatcher(input);
+    }
+    
     
     /**
      * This is simply some regex to check to see if a string is purely a number. 

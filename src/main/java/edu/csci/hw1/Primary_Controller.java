@@ -117,6 +117,7 @@ public class Primary_Controller {
                 if (valid.validateKeyStroke(temp) && valid.validateOrder(tf_expression.getText(), output)){
                     tf_expression.setText(tf_expression.getText() + output);
                 }
+
                 if (!valid.parenMatcher(tf_expression.getText())){
                     tf_expression.getStyleClass().removeAll("good", "bad");
                     tf_expression.getStyleClass().addAll("bad");
@@ -326,6 +327,7 @@ public class Primary_Controller {
         File temp = fileChooser.showOpenDialog(Calculator.get_stage());
         if (temp != null){
             fp = new File_Processor(temp);
+            tf_result.setText("Result of batch files can be found at: " + fp.processBatchFiles());
         }
     }
     
