@@ -20,6 +20,16 @@ public class Process_Expression {
      * returned if the expression evaluates to NaN (not a number) and -9999999999 for infinity. 
      */
     public double calculate_result(String inputExpression){
+        CalculatorScanner scanner = new CalculatorScanner(inputExpression);
+        try {
+            //Just a sample result of how to use it. 
+            String result = scanner.readToken();
+            
+        } catch (Exception ex) {
+            ex.printStackTrace(System.err);
+        }
+        
+        //This is simply to display something temporarily until all the calculations are hooked up. 
         double result = 9999999999.0;
         
         return result;

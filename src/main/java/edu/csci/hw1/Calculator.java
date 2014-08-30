@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -46,6 +47,7 @@ public class Calculator extends Application {
         stage.resizableProperty().not();
         stage.setResizable(false);
         stage.centerOnScreen();
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("images/icon256.png")));
         Calculator.stage = stage;
         stage.show();
 

@@ -1,8 +1,11 @@
+package edu.csci.hw1;
+
 import java.util.Scanner;
-import java.util.Stack;
 import java.io.File;
+import java.io.FileNotFoundException;
 
 public class CalculatorScanner {
+
     public Scanner scanner;
 
     public CalculatorScanner(String str) {
@@ -12,11 +15,11 @@ public class CalculatorScanner {
     public CalculatorScanner(File file) throws Exception {
         try {
             scanner = new Scanner(file).useDelimiter("");
-        } catch (Exception e) {
+        } catch (FileNotFoundException e) {
             throw new Exception("File does not exist");
         }
     }
-    
+
     public boolean hasNextToken() {
         return scanner.hasNext();
     }

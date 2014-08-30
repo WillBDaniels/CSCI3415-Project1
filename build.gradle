@@ -39,7 +39,7 @@ javafx {
     height = 600
     embedJNLP = false
     icons {
-        shortcut = ['icons/programLogo16.png', 'icons/programLogo32.png', 'icons/programLogo128.png']
+        shortcut = ['icons/icon32.png', 'icons/icon64.png', 'icons/icon128.png']
     }
 
     // deplpy/info attributes
