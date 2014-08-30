@@ -10,11 +10,17 @@ If you came across this project and you are NOT in CSCI 3415 for the fall and yo
 This calculator will also support the ability to read in a batch file of mathematical expressions, line-ordered in a file, as such: 
 
 expression 1
+
 expression 2
+
 expression 3
+
 expression 4
+
 ...
+
 ...
+
 expression n
 
 This file can be any regular file format extension, so long as it's a plain-text file. The results are placed in a user-defined location in a .txt file.  
