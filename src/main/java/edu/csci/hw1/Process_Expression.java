@@ -29,6 +29,21 @@ public class Process_Expression {
             ex.printStackTrace(System.err);
         }
         
+        //Added by Joe, 8/30/2014 10:04 P.M.---------------
+        //Evaluating input---------------------------------
+        //Create Stack
+        stack_class s1 = new stack_class;
+    
+        //Convert String (in-set notation) to Reverse Polish Notation and pushes onto stack
+        //Also uses a second stack for shunting-yard algorithm.
+        isn_to_rpn(result, s1);
+        
+        //Evaluate
+        evaluate(s1);
+        
+        //Solution remains on stack
+        //-------------------------------------------------
+        
         //This is simply to display something temporarily until all the calculations are hooked up. 
         double result = 9999999999.0;
         
