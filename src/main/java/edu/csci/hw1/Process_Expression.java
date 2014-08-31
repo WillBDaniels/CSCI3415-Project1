@@ -33,10 +33,46 @@ public class Process_Expression {
         //Evaluating input---------------------------------
         //Create Stack
         stack_class s1 = new stack_class;
+        stack_class s2 = new stack_class;
+        
+        //Integer to iterate over entire string
+        int index = 0;
     
         //Convert String (in-set notation) to Reverse Polish Notation and pushes onto stack
         //Also uses a second stack for shunting-yard algorithm.
-        isn_to_rpn(result, s1);
+        //isn_to_rpn(result, s1);
+        while(index < result.length());
+        {
+            //Handle each operator precedence
+            if(result.charAt(index) == ' ')
+            {
+                
+            }
+            else if(Character.isDigit(result.charAt(index)) || result.charAt(index) == '.')
+            {
+                
+            }
+            else if(result.charAt(index) == '+' || result.charAt(index) == '-')
+            {
+                
+            }
+            else if(result.charAt(index) == '*' || result.charAt(index) == '/')
+            {
+                
+            }
+            else if(result.charAt(index) == '^')
+            {
+                
+            }
+            else if(result.charAt(index) == '(')
+            {
+                
+            }
+            
+            index++;
+        }
+        
+        //Pop remaining off operator stack
         
         //Evaluate
         evaluate(s1);
