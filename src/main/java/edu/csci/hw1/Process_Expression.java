@@ -26,14 +26,13 @@ public class Process_Expression {
             //result will be inputExpression in RPN form
             String result = scanner.readToken();
         
+            //Create new Reverse Polish Notation Evaluator
+            RPN_Eval eval = new RPN_Eval(result);
             
         } catch (Exception ex) {
             ex.printStackTrace(System.err);
     
         }
-        
-        //Create new Reverse Polish Notation Evaluator
-        RPN_Eval eval = new RPN_Eval(result);
         
         //Evaluate RPN Function
         double result = eval.answer();
