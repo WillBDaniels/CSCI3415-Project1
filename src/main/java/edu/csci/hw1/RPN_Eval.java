@@ -33,27 +33,87 @@ public class RPN_Eval
     for(int i = 0; i < rpn_string.length(); i++)
     {
      //If a number or decimal point
+     if(Character.isDigit(rpn_string.charAt(index)) || rpn_string.charAt(index) == '.')
+     {
       //Add on to temp
-      
-      //If a space
-       //If temp is not empty
-        //Convert temp to double and push onto stack
-        //temp = "";
+      temp += rpn_string.charAt(index);
+     } 
      
-     //Else if an operator
+     //Else if a space
+     else if(rpn_string.charAt(index) == ' ')
+     {
+      //If temp is not empty
+      if(temp != "")
+      {
+       //Convert temp to double and push onto stack
+       s1.push(Double.parseDouble(temp));
+        
+       //empty temp
+       temp == "";
+      }
+     }
+      
+     //Else if +
+     else if(rpn_string.charAt(index) == '+')
+     {
       //Pop two operands off stack
       //Evaluate
       //Push value on stack s1
-      
+     }
+     
+     //Else if -
+     else if(rpn_string.charAt(index) == '-')
+     {
+      //Pop two operands off stack
+      //Evaluate
+      //Push value on stack s1
+     }
+     
+     //Else if *
+     else if(rpn_string.charAt(index) == '*')
+     {
+      //Pop two operands off stack
+      //Evaluate
+      //Push value on stack s1
+     }
+     
+     //Else if /
+     else if(rpn_string.charAt(index) == '/')
+     {
+      //Pop two operands off stack
+      //Evaluate
+      //Push value on stack s1
+     }
+     
+     //Else if ^
+     else if(rpn_string.charAt(index) == '^')
+     {
+      //Pop two operands off stack
+      //Evaluate
+      //Push value on stack s1
+     }
+     
      //Else
+     else
+     {
       //Error?
+     }
     }
     
     //Return the answer
     //If stack has one value
+    if(s1.used() == 1)
+    {
      //Return s1.top()
+     return s1.top();
+    }
+    
     //Else
-     //Error: Return Not a number
+    else
+    {
+     //Error: Return Not a number or zero
+     return 0;
+    }
   }
 
 }
