@@ -9,6 +9,7 @@ Author: ZURAWSKJ, 9-1-2014
 public class RPN_Eval 
 {
   //CONSTRUCTOR
+  //Receives a string in RPN notation, it requires commas between all operands and operators
   RPN_Eval(String expr_in)
   {
     rpn_string = expr_in;
