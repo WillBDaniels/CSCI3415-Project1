@@ -21,22 +21,32 @@ public class Process_Expression {
      */
      
     public double calculate_result(String inputExpression){
+        
         CalculatorScanner scanner = new CalculatorScanner(inputExpression);
+        
+        //double to hold answer
+        double answer = 0;
+        
         try {
-            //result will be inputExpression in RPN form
+            //result is a valid in-set notation expression
             String result = scanner.readToken();
+            
+            //Convert result to RPN
+            InsetToRPN converter = new InsetToRPN(result);
+            converter.convert();
+            String rpn_out = converter.getRPNString();
         
             //Create new Reverse Polish Notation Evaluator
-            RPN_Eval eval = new RPN_Eval(result);
+            RPN_Eval eval = new RPN_Eval(rpn_out);
+            
+            //Evaluate RPN Function
+            double answer = eval.answer();
             
         } catch (Exception ex) {
             ex.printStackTrace(System.err);
     
         }
         
-        //Evaluate RPN Function
-        double result = eval.answer();
-        
-        return result;
+        return answer;
     }
 }
