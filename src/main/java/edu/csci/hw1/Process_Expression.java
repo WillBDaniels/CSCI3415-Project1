@@ -40,7 +40,7 @@ public class Process_Expression {
             RPN_Eval eval = new RPN_Eval(rpn_out);
             
             //Evaluate RPN Function
-            double answer = eval.answer();
+            answer = eval.answer();
             
         } catch (Exception ex) {
             ex.printStackTrace(System.err);
