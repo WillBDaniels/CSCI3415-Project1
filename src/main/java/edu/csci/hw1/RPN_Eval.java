@@ -1,6 +1,7 @@
 package edu.csci.hw1;
 
 import java.util.Stack;
+import static java.lang.Math.pow;
 
 /*
 Author: ZURAWSKJ, 9-1-2014
@@ -60,7 +61,7 @@ public class RPN_Eval
      else if(rpn_string.charAt(i) == '+')
      {
       //Data to hold operands
-      Double x = 0,y = 0,sum = 0;
+      Double x = 0.0,y = 0.0,sum = 0.0;
       //Put operands into variables and pop two operands off stack
       y = s1.peek();
       s1.pop();
@@ -79,13 +80,13 @@ public class RPN_Eval
      {
       //If next char is digit or decimal point, add on to temp
       //Next char not being a space means it can only be a number or decimal point (If proper format)
-      if(s1.used() > 1 && rpn_string.charAt(i+1) != ' ')
+      if(rpn_string.charAt(i+1) != ' ')
       {
        temp += "-";
       }
       
       //Data to hold operands
-      Double x = 0,y = 0,diff = 0;
+      Double x = 0.0,y = 0.0,diff = 0.0;
       //Put operands into variables and pop two operands off stack
       y = s1.peek();
       s1.pop();
@@ -103,7 +104,7 @@ public class RPN_Eval
      else if(rpn_string.charAt(i) == '*')
      {
       //Data to hold operands
-      Double x = 0,y = 0,prod = 0;
+      Double x = 0.0,y = 0.0,prod = 0.0;
       //Put operands into variables and pop two operands off stack
       y = s1.peek();
       s1.pop();
@@ -121,7 +122,7 @@ public class RPN_Eval
      else if(rpn_string.charAt(i) == '/')
      {
       //Data to hold operands
-      Double x = 0,y = 0,quo = 0;
+      Double x = 0.0,y = 0.0,quo = 0.0;
       //Put operands into variables and pop two operands off stack
       y = s1.peek();
       s1.pop();
@@ -139,7 +140,7 @@ public class RPN_Eval
      else if(rpn_string.charAt(i) == '^')
      {
       //Data to hold operands
-      Double x = 0,y = 0,pow = 0;
+      Double x = 0.0,y = 0.0,pow = 0.0;
       //Put operands into variables and pop two operands off stack
       y = s1.peek();
       s1.pop();
