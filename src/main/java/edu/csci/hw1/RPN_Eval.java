@@ -29,7 +29,7 @@ public class RPN_Eval
     //Temporary string to hold each number before pushing onto stack as a double
     String temp = "";
     
-    //Stack of doubles to hold values before evaluation
+    //Stack of doubles to hold values before evaluations
     Stack<Double> s1 = new Stack<>();
     
     //Check each character in string temp
