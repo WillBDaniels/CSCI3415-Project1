@@ -35,6 +35,7 @@ public class RPN_Eval
     for(int i = 0; i < rpn_string.length(); i++)
     {
      //If a number or decimal point
+     //Negative sign is checked for in operator- block
      if(Character.isDigit(rpn_string.charAt(i)) || rpn_string.charAt(i) == '.')
      {
       //Add on to temp
@@ -58,41 +59,98 @@ public class RPN_Eval
      //Else if +
      else if(rpn_string.charAt(i) == '+')
      {
-      //Pop two operands off stack
+      //Data to hold operands
+      Double x = 0,y = 0,sum = 0;
+      //Put operands into variables and pop two operands off stack
+      y = s1.peek();
+      s1.pop();
+      x = s1.peek();
+      s1.pop();
+      
       //Evaluate
+      sum = x + y;
+      
       //Push value on stack s1
+      s1.push(sum);
      }
      
      //Else if -
      else if(rpn_string.charAt(i) == '-')
      {
-      //Pop two operands off stack
+      //If next char is digit or decimal point, add on to temp
+      //Next char not being a space means it can only be a number or decimal point (If proper format)
+      if(s1.used() > 1 && rpn_string.charAt(i+1) != ' ')
+      {
+       temp += "-";
+      }
+      
+      //Data to hold operands
+      Double x = 0,y = 0,diff = 0;
+      //Put operands into variables and pop two operands off stack
+      y = s1.peek();
+      s1.pop();
+      x = s1.peek();
+      s1.pop();
+      
       //Evaluate
+      diff = x - y;
+      
       //Push value on stack s1
+      s1.push(diff);
      }
      
      //Else if *
      else if(rpn_string.charAt(i) == '*')
      {
-      //Pop two operands off stack
+      //Data to hold operands
+      Double x = 0,y = 0,prod = 0;
+      //Put operands into variables and pop two operands off stack
+      y = s1.peek();
+      s1.pop();
+      x = s1.peek();
+      s1.pop();
+      
       //Evaluate
+      prod = x * y;
+      
       //Push value on stack s1
+      s1.push(prod);
      }
      
      //Else if /
      else if(rpn_string.charAt(i) == '/')
      {
-      //Pop two operands off stack
+      //Data to hold operands
+      Double x = 0,y = 0,quo = 0;
+      //Put operands into variables and pop two operands off stack
+      y = s1.peek();
+      s1.pop();
+      x = s1.peek();
+      s1.pop();
+      
       //Evaluate
+      quo = x / y;
+      
       //Push value on stack s1
+      s1.push(quo);
      }
      
      //Else if ^
      else if(rpn_string.charAt(i) == '^')
      {
-      //Pop two operands off stack
+      //Data to hold operands
+      Double x = 0,y = 0,pow = 0;
+      //Put operands into variables and pop two operands off stack
+      y = s1.peek();
+      s1.pop();
+      x = s1.peek();
+      s1.pop();
+      
       //Evaluate
+      pow = pow(x, y);
+      
       //Push value on stack s1
+      s1.push(pow);
      }
      
      //Else
