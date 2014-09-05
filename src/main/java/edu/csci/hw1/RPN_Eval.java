@@ -80,7 +80,7 @@ public class RPN_Eval
      {
       //If next char is digit or decimal point, add on to temp
       //Next char not being a space means it can only be a number or decimal point (If proper format)
-      if(rpn_string.charAt(i+1) != ' ')
+      if((i < rpn_string.length() - 1) && (rpn_string.charAt(i+1) != ' '))
       {
        temp += "-";
       }
