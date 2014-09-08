@@ -33,6 +33,7 @@ public class Primary_Controller {
     private TextField tf_expression, tf_result;
     
 
+    
     /**
      * This is the main entry point into the calculator program . it initializes
      * all of our listeners that grab things like keyboard input, etc. etc. It also
@@ -78,6 +79,10 @@ public class Primary_Controller {
            }
         });
         
+        vb_main_window.setOnKeyPressed((KeyEvent e)->{
+
+        });
+        
         //This is the primary listener that kicks off the keyboard-level validation. 
         //Everything inside of this method should force the user to input nothing
         //but valid mathematical expressions. 
@@ -86,6 +91,8 @@ public class Primary_Controller {
                 if (!tf_expression.getText().isEmpty()){
                     tf_expression.setText(tf_expression.getText().substring(0, tf_expression.getText().length() -1));
                 }
+            }else if (e.getCode() == KeyCode.ENTER){
+                equal_pressed();
             }else{
                 KeyCode temp;
                 String output;

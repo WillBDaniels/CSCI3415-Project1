@@ -21,7 +21,9 @@ public class Validation {
     private final List<KeyCode> validKeys = new ArrayList(Arrays.asList(KeyCode.LEFT_PARENTHESIS, KeyCode.RIGHT_PARENTHESIS, KeyCode.PLUS
     , KeyCode.MINUS, KeyCode.SLASH, KeyCode.DIGIT1, KeyCode.DIGIT2,
     KeyCode.DIGIT3, KeyCode.DIGIT4, KeyCode.DIGIT5, KeyCode.DIGIT6, KeyCode.DIGIT7, KeyCode.DIGIT8, KeyCode.DIGIT9, 
-    KeyCode.DIGIT0, KeyCode.ASTERISK, KeyCode.CIRCUMFLEX, KeyCode.PERIOD));
+    KeyCode.DIGIT0, KeyCode.ASTERISK, KeyCode.CIRCUMFLEX, KeyCode.PERIOD, KeyCode.NUMPAD0, KeyCode.NUMPAD1, KeyCode.NUMPAD2
+    , KeyCode.NUMPAD3, KeyCode.NUMPAD4, KeyCode.NUMPAD5, KeyCode.NUMPAD6, KeyCode.NUMPAD7, KeyCode.NUMPAD8, KeyCode.NUMPAD9
+    , KeyCode.ADD, KeyCode.SUBTRACT, KeyCode.MULTIPLY, KeyCode.DIVIDE, KeyCode.DECIMAL));
     
     private final List<String> validKeysStrings = new ArrayList(Arrays.asList("(", ")", "+", "-", "/", "1", "2"
     , "3", "4", "5", "6", "7", "8", "9", "0", "*", "^", "."));
@@ -35,6 +37,7 @@ public class Validation {
      * @return true if the keystroke is in our list, and therefore valid, false otherwise. 
      */
     public boolean validateKeyStroke(KeyCode keyStroke){
+        System.out.println("This is the keystroke: " + keyStroke);
         if (keyStroke == KeyCode.BACK_SPACE){
             return true;
         }
@@ -71,6 +74,10 @@ public class Validation {
         //is a number, no problem! that's what we want, anything else is not valid.
         if (lastChar.equals(".")){
             return isNumeric(newItem);
+        }
+        
+        if ((lastChar.equals("-") || lastChar.equals("+")) && initialOrder.length() == 1){
+            return (isNumeric(lastChar));
         }
         
         //Check the case where the second to last item types and the last items typed were both 
