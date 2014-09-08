@@ -1,6 +1,7 @@
 package edu.csci.hw1;
 
 import java.io.File;
+import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
@@ -49,8 +50,8 @@ public class Primary_Controller {
     private void initialize() {
         Tooltip tip = new Tooltip();
         final String tipText = "In this window you can either just start typing any "
-                + "valid mathematical expression, it will dynamically check your input, "
-                + "or you can use the buttons below to add input. At any time, if you "
+                + "valid mathematical expression, it will dynamically check your input.\n "
+                + "Alternatively, you can use the buttons below to add input.\n At any time, if you "
                 + "want to copy this input, simply press 'ctrl + c' to copy the expression"
                 + " to the clipboard. ";
         
@@ -234,6 +235,11 @@ public class Primary_Controller {
         }
     }
 
+    /**
+     * This method validates the number of parenthesis that exist, and only lets
+     * you create the right parenthesis if there are a matching number of left 
+     * parenthesis.
+     */
     @FXML
     private void right_paren_pressed() {
         if (valid.validateOrder(tf_expression.getText(), ")")){
@@ -249,6 +255,9 @@ public class Primary_Controller {
 
     }
 
+    /**
+     * This method simply adds a '+' to the expression window. 
+     */
     @FXML
     private void plus_pressed() {
         if (valid.validateOrder(tf_expression.getText(), "+")){
@@ -257,6 +266,9 @@ public class Primary_Controller {
 
     }
 
+    /**
+     * This method simply adds a '1' to the expression window. 
+     */
     @FXML
     private void one_pressed() {
         if (valid.validateOrder(tf_expression.getText(), "1")){
@@ -264,6 +276,9 @@ public class Primary_Controller {
         }
     }
 
+    /**
+     * This method simply adds a '2' to the expression window. 
+     */
     @FXML
     private void two_pressed() {
         if (valid.validateOrder(tf_expression.getText(), "2")){
@@ -271,6 +286,9 @@ public class Primary_Controller {
         }
     }
 
+    /**
+     * This method simply adds a '3' to the expression window. 
+     */
     @FXML
     private void three_pressed() {
         if (valid.validateOrder(tf_expression.getText(), "3")){
@@ -278,6 +296,9 @@ public class Primary_Controller {
         }
     }
 
+    /**
+     * This method simply adds a '-' to the expression window. 
+     */
     @FXML
     private void minus_pressed() {
         if (valid.validateOrder(tf_expression.getText(), "-")){
@@ -285,6 +306,9 @@ public class Primary_Controller {
         }
     }
 
+    /**
+     * This method simply adds a '4' to the expression window. 
+     */
     @FXML
     private void four_pressed() {
         if (valid.validateOrder(tf_expression.getText(), "4")){
@@ -292,6 +316,9 @@ public class Primary_Controller {
         }
     }
 
+    /**
+     * This method simply adds a '5' to the expression window. 
+     */
     @FXML
     private void five_pressed() {
         if (valid.validateOrder(tf_expression.getText(), "5")){
@@ -299,6 +326,9 @@ public class Primary_Controller {
         }
     }
 
+    /**
+     * This method simply adds a '6' to the expression window. 
+     */
     @FXML
     private void six_pressed() {
         if (valid.validateOrder(tf_expression.getText(), "6")){
@@ -306,6 +336,9 @@ public class Primary_Controller {
         }
     }
 
+    /**
+     * This method simply adds a '/' to the expression window. 
+     */
     @FXML
     private void slash_pressed() {
         if (valid.validateOrder(tf_expression.getText(), "/")){
@@ -313,6 +346,9 @@ public class Primary_Controller {
         }
     }
 
+    /**
+     * This method simply adds a '7' to the expression window. 
+     */
     @FXML
     private void seven_pressed() {
         if (valid.validateOrder(tf_expression.getText(), "7")){
@@ -320,6 +356,9 @@ public class Primary_Controller {
         }
     }
 
+    /**
+     * This method simply adds a '8' to the expression window. 
+     */
     @FXML
     private void eight_pressed() {
         if (valid.validateOrder(tf_expression.getText(), "8")){
@@ -327,6 +366,9 @@ public class Primary_Controller {
         }
     }
 
+    /**
+     * This method simply adds a '9' to the expression window. 
+     */
     @FXML
     private void nine_pressed() {
         if (valid.validateOrder(tf_expression.getText(), "9")){
@@ -334,6 +376,9 @@ public class Primary_Controller {
         }
     }
 
+    /**
+     * This method simply adds a '*' to the expression window. 
+     */
     @FXML
     private void star_pressed() {
         if (valid.validateOrder(tf_expression.getText(), "*")){
@@ -341,6 +386,9 @@ public class Primary_Controller {
         }
     }
 
+    /**
+     * This method simply adds a '0' to the expression window. 
+     */
     @FXML
     private void zero_pressed() {
         if (valid.validateOrder(tf_expression.getText(), "0")){
@@ -348,6 +396,9 @@ public class Primary_Controller {
         }
     }
 
+    /**
+     * This method simply adds a '.' to the expression window. 
+     */
     @FXML
     private void period_pressed() {
         if (valid.validateOrder(tf_expression.getText(), ".")){
@@ -355,6 +406,9 @@ public class Primary_Controller {
         }
     }
 
+    /**
+     * This method simply adds a '^' to the expression window. 
+     */
     @FXML
     private void carat_pressed() {
         if (valid.validateOrder(tf_expression.getText(), "^")){
@@ -362,10 +416,25 @@ public class Primary_Controller {
         }
     }
     
+    /**
+     * This method loads our 'help page ' which explains the functionality of the 
+     * calculator. 
+     */
     @FXML
     private void load_help(){
-        
+        try {
+            Runtime.getRuntime().exec("notepad.exe static_files/Readme.txt");
+        } catch (IOException ex) {
+            ex.printStackTrace(System.err);
+        }
+
     }
+    
+    /**
+     * This method reads in a file of mathematical expressions (line delimited) 
+     * and then goes through them, one at a time, and evaluates them all. It writes
+     * the output to a file names after the name of the input file. 
+     */
     @FXML
     private void load_expression(){
         File_Processor fp;
@@ -378,11 +447,17 @@ public class Primary_Controller {
         }
     }
     
+    /**
+     * This method simply closes the program. 
+     */
     @FXML
     private void close_program(){
         Calculator.get_stage().close();
     }
     
+    /**
+     * This method simple removes one element from the right of the expression screen.
+     */
     @FXML
     private void back_pressed(){
         if (tf_expression.getText().length() > 0){
