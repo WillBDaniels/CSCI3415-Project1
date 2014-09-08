@@ -83,9 +83,7 @@ public class Validation {
             //Handle the case where the last character typed was a + or -, but it was in front of a number, 
             //so the form of something like 2+
         }else if ((lastChar.equals("+") || lastChar.equals("-")) && !((secondToLast.equals("+") || (secondToLast.equals("-"))))){
-            if (newItem.equals("+") || newItem.equals("-") || isNumeric(newItem) || newItem.equals("(")){
-                return true;
-            }
+            return newItem.equals("+") || newItem.equals("-") || isNumeric(newItem) || newItem.equals("(");
         }
         
         
@@ -108,7 +106,7 @@ public class Validation {
         if (lastChar.equals(")")){
             return !isNumeric(newItem);
         }
-        if (lastChar.equals("^") || lastChar.equals("*")){
+        if (lastChar.equals("^") || lastChar.equals("*") || lastChar.equals("/")){
             return newItem.equals("(") || isNumeric(newItem) || newItem.equals("+") || newItem.equals("-");
         }
         return newItem.equals(")") || isNumeric(newItem);

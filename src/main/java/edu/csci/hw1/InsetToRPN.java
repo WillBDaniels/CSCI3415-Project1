@@ -46,7 +46,9 @@ public class InsetToRPN {
                             rpn.append(top.toString() + " ");
 
                             // look at next operator
-                            top = operators.peek();
+                            if (!operators.empty()){
+                                top = operators.peek();
+                            }
                         }
                     }
 

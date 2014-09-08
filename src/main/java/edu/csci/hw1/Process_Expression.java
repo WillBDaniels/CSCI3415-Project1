@@ -27,7 +27,7 @@ public class Process_Expression {
         double answer = 0;
         
         try {
-            
+            System.out.println("This is the inputExpression: " + inputExpression);
             //Convert result to RPN
             InsetToRPN converter = new InsetToRPN();
             converter.inset(inputExpression);
