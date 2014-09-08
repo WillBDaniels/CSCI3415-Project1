@@ -43,9 +43,7 @@ public class Process_Expression {
             
         } catch (Exception ex) {
             ex.printStackTrace(System.err);
-    
         }
-        
         return answer;
     }
 }

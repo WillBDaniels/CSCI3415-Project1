@@ -3,6 +3,9 @@ package edu.csci.hw1;
 import java.io.File;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
@@ -20,6 +23,7 @@ import javafx.stage.FileChooser;
  */
 public class Primary_Controller {
     private boolean shiftDown = false;
+    private boolean controlDown = false;
     
     private final Validation valid = new Validation();
     
@@ -43,6 +47,19 @@ public class Primary_Controller {
      */
     @FXML
     private void initialize() {
+        Tooltip tip = new Tooltip();
+        final String tipText = "In this window you can either just start typing any "
+                + "valid mathematical expression, it will dynamically check your input, "
+                + "or you can use the buttons below to add input. At any time, if you "
+                + "want to copy this input, simply press 'ctrl + c' to copy the expression"
+                + " to the clipboard. ";
+        
+        tip.setText(tipText);
+        tf_expression.setTooltip(tip);
+        final Clipboard clipboard = Clipboard.getSystemClipboard();
+        final ClipboardContent content = new ClipboardContent();
+
+        
         
         //force the focus onto our main window. 
         vb_main_window.requestFocus();
@@ -59,11 +76,24 @@ public class Primary_Controller {
         if (!tf_expression.focusedProperty().get()){
             vb_main_window.requestFocus();
         }
+        
+        /*
+        This listener makes it so the expression window can't obtain focus since
+        it was giving me some trouble with the keystroke listeners ( I couldn't block
+        them properly). This does make it so you can't copy paste directly, but if you
+        use ctrl + c you can copy/paste the window without trouble. 
+        */
         tf_expression.focusedProperty().addListener((ChangeListener)->{
             if (tf_expression.focusedProperty().get()){
                 vb_main_window.requestFocus();
             }
         });
+        
+        /*
+        This listener makes it so that the result can't have focus, really, we just
+        don't ever want that window to have focus for any reason. This makes it so you 
+        can't copy/paste, but that's not a huge deal. 
+        */
         tf_result.focusedProperty().addListener((ChangeListener)->{
             if (tf_result.focusedProperty().get()){
                 vb_main_window.requestFocus();
@@ -76,6 +106,9 @@ public class Primary_Controller {
         vb_main_window.setOnKeyReleased((KeyEvent e)->{
            if (e.getCode().equals(KeyCode.SHIFT)){ 
                 shiftDown = false;
+           }
+           if (e.getCode().equals(KeyCode.CONTROL)){
+               controlDown = false;
            }
         });
         
@@ -94,6 +127,13 @@ public class Primary_Controller {
             }else if (e.getCode() == KeyCode.ENTER){
                 equal_pressed();
             }else{
+                if (controlDown){
+                    if (e.getCode() == KeyCode.C){
+                        content.putString(tf_expression.getText());
+                        clipboard.setContent(content);
+                    }
+                }
+                controlDown = e.isControlDown();
                 KeyCode temp;
                 String output;
                 if (shiftDown){
