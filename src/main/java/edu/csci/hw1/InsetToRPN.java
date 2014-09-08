@@ -15,6 +15,10 @@ public class InsetToRPN {
     // Receives a string in Inset Notation and converts to RPN
     public void inset (String expr_in) {
         inset_string = expr_in;
+        inset_string = inset_string.replaceAll("--", "+")
+                                   .replaceAll("\\+-", "-")
+                                   .replaceAll("-\\+", "-")
+                                   .replaceAll("\\+\\+", "+");
     }
   
     // ANSWER
