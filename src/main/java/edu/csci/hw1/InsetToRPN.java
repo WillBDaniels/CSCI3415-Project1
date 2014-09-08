@@ -13,7 +13,7 @@ public class InsetToRPN {
 
     // CONSTRUCTOR
     // Receives a string in Inset Notation and converts to RPN
-    public inset (String expr_in) {
+    public void inset (String expr_in) {
         inset_string = expr_in;
     }
   
@@ -23,7 +23,7 @@ public class InsetToRPN {
     public void convert() throws Exception {
         CalculatorScanner cs = new CalculatorScanner(inset_string);
         StringBuilder rpn = new StringBuilder();
-        Stack<Operator> operators = new Stack<Operator>();
+        Stack<Operator> operators = new Stack<>();
 
         try {
             // read the entire expression
@@ -69,7 +69,7 @@ public class InsetToRPN {
                 rpn.append(operators.pop().toString() + " ");
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace(System.err);
         }
 
         rpn_string = rpn.toString();
@@ -80,7 +80,8 @@ public class InsetToRPN {
             Double.parseDouble(str);
 
             return true;
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
+            //e.printStackTrace(System.err);
             return false;
         }
     }

@@ -27,7 +27,7 @@ public class CalculatorScanner {
     public String readToken() throws Exception {
         // any digits, zero or one '.', followed by any digits
         String digits = "[0-9]*\\.?[0-9]*";
-        String operators = "(\\+)?(\\-)?(\\*)?(\\^)?(\\()?(\\))?";
+        String operators = "(\\+)?(\\-)?(\\*)?(\\^)?(\\()?(\\))?(\\/)?";
         StringBuilder sb = new StringBuilder();
 
         // if there isn't another character, throw exception

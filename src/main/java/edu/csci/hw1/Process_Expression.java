@@ -22,19 +22,18 @@ public class Process_Expression {
      
     public double calculate_result(String inputExpression){
         
-        CalculatorScanner scanner = new CalculatorScanner(inputExpression);
         
         //double to hold answer
         double answer = 0;
         
         try {
-            //result is a valid in-set notation expression
-            String result = scanner.readToken();
             
             //Convert result to RPN
-            InsetToRPN converter = new InsetToRPN(result);
+            InsetToRPN converter = new InsetToRPN();
+            converter.inset(inputExpression);
             converter.convert();
             String rpn_out = converter.getRPNString();
+            System.out.println("This is the rpn_out: " + rpn_out);
         
             //Create new Reverse Polish Notation Evaluator
             RPN_Eval eval = new RPN_Eval(rpn_out);
