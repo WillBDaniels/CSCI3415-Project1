@@ -69,8 +69,14 @@ public class RPN_Eval
       x = s1.peek();
       s1.pop();
       
+      //Output
+      System.out.print(x + " + " + y + " = ");
+      
       //Evaluate
       sum = x + y;
+      
+      //Output
+      System.out.println(sum);
       
       //Push value on stack s1
       s1.push(sum);
@@ -86,19 +92,28 @@ public class RPN_Eval
        temp += "-";
       }
       
-      //Data to hold operands
-      Double x = 0.0,y = 0.0,diff = 0.0;
-      //Put operands into variables and pop two operands off stack
-      y = s1.peek();
-      s1.pop();
-      x = s1.peek();
-      s1.pop();
-      
-      //Evaluate
-      diff = x - y;
-      
-      //Push value on stack s1
-      s1.push(diff);
+      else
+      {
+       //Data to hold operands
+       Double x = 0.0,y = 0.0,diff = 0.0;
+       //Put operands into variables and pop two operands off stack
+       y = s1.peek();
+       s1.pop();
+       x = s1.peek();
+       s1.pop();
+       
+       //Output
+       System.out.print(x + " - " + y + " = ");
+       
+       //Evaluate
+       diff = x - y;
+       
+       //Output
+       System.out.println(diff);
+       
+       //Push value on stack s1
+       s1.push(diff);
+      }
      }
      
      //Else if *
@@ -112,8 +127,14 @@ public class RPN_Eval
       x = s1.peek();
       s1.pop();
       
+      //Output
+      System.out.print(x + " * " + y + " = ");
+      
       //Evaluate
       prod = x * y;
+      
+      //Output
+      System.out.println(prod);
       
       //Push value on stack s1
       s1.push(prod);
@@ -130,8 +151,14 @@ public class RPN_Eval
       x = s1.peek();
       s1.pop();
       
+      //Output
+      System.out.print(x + " / " + y + " = ");
+      
       //Evaluate
       quo = x / y;
+      
+      //Output
+      System.out.println(quo);
       
       //Push value on stack s1
       s1.push(quo);
@@ -148,8 +175,14 @@ public class RPN_Eval
       x = s1.peek();
       s1.pop();
       
+      //Output
+      System.out.print(x + " ^ " + y + " = ");
+      
       //Evaluate
       pow = pow(x, y);
+      
+      //Output
+      System.out.println(pow);
       
       //Push value on stack s1
       s1.push(pow);
