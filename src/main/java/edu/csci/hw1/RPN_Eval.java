@@ -68,8 +68,14 @@ public class RPN_Eval
       x = s1.peek();
       s1.pop();
       
+      //Output
+      System.out.print(x + " + " + y + " = ");
+      
       //Evaluate
       sum = x + y;
+      
+      //Output
+      System.out.println(sum);
       
       //Push value on stack s1
       s1.push(sum);
@@ -93,8 +99,14 @@ public class RPN_Eval
       x = s1.peek();
       s1.pop();
       
+      //Output
+      System.out.print(x + " - " + y + " = ");
+      
       //Evaluate
       diff = x - y;
+      
+      //Output
+      System.out.println(diff);
       
       //Push value on stack s1
       s1.push(diff);
@@ -111,8 +123,14 @@ public class RPN_Eval
       x = s1.peek();
       s1.pop();
       
+      //Output
+      System.out.print(x + " * " + y + " = ");
+      
       //Evaluate
       prod = x * y;
+      
+      //Output
+      System.out.println(prod);
       
       //Push value on stack s1
       s1.push(prod);
@@ -129,8 +147,14 @@ public class RPN_Eval
       x = s1.peek();
       s1.pop();
       
+      //Output
+      System.out.print(x + " / " + y + " = ");
+      
       //Evaluate
       quo = x / y;
+      
+      //Output
+      System.out.println(quo);
       
       //Push value on stack s1
       s1.push(quo);
@@ -147,8 +171,14 @@ public class RPN_Eval
       x = s1.peek();
       s1.pop();
       
+      //Output
+      System.out.print(x + " ^ " + y + " = ");
+      
       //Evaluate
       pow = pow(x, y);
+      
+      //Output
+      System.out.println(pow);
       
       //Push value on stack s1
       s1.push(pow);
