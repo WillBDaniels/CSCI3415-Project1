@@ -49,6 +49,8 @@ public class CalculatorScanner {
                 }
 
                 return sb.toString();
+            } else if (scanner.hasNext("!") && scanner.hasNext("!")) {
+                return scanner.next();
             } else {
                 throw new Exception("Invalid token");
             }

@@ -11,19 +11,22 @@ public class InsetToRPN {
     private String inset_string;
     private String rpn_string;
 
-    // CONSTRUCTOR
-    // Receives a string in Inset Notation and converts to RPN
     public void inset (String expr_in) {
         inset_string = expr_in;
+        this.cleanInfixStr();
+    }
+    
+    private void cleanInfixStr() {
         inset_string = inset_string.replaceAll("--", "+")
                                    .replaceAll("\\+-", "-")
                                    .replaceAll("-\\+", "-")
-                                   .replaceAll("\\+\\+", "+");
+                                   .replaceAll("\\+\\+", "+")
+                                   .replaceAll("\\*\\-", "*!")
+                                   .replaceAll("\\/\\-", "/!")
+                                   .replaceAll("\\-\\(", "!(")
+                                   .replaceAll("\\^\\-", "^!");
     }
   
-    // ANSWER
-    // PRE: The rpn_string data field contains a valid Inset Notation.
-    // POST: Converts inset_string to RPN and stores in rpn_string.
     public void convert() throws Exception {
         CalculatorScanner cs = new CalculatorScanner(inset_string);
         StringBuilder rpn = new StringBuilder();
@@ -35,8 +38,11 @@ public class InsetToRPN {
                 String token = cs.readToken();
 
                 // if its a number, it can go on the string
-                if (isDouble(token)) {
-                    rpn.append(token + " ");
+                if (isDouble(token) || token.equals("!")) {
+                    if (token.equals("!"))
+                        rpn.append("-");
+                    else
+                        rpn.append(token + " ");
                 } else {
                     Operator curr = new Operator(token);
 
@@ -92,15 +98,11 @@ public class InsetToRPN {
         }
     }
 
-    // GET_INSET_STRING
-    // POST: Returns inset_string
     public String getInsetString()
     {
         return inset_string;
     }
   
-    // GET_RPN_STRING
-    // POST: Returns RPN_string
     public String getRPNString()
     {
         return rpn_string;

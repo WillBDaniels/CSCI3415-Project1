@@ -37,7 +37,8 @@ public class RPN_Eval
     {
      //If a number or decimal point
      //Negative sign is checked for in operator- block
-     if(Character.isDigit(rpn_string.charAt(i)) || rpn_string.charAt(i) == '.')
+     if(Character.isDigit(rpn_string.charAt(i)) || rpn_string.charAt(i) == '.'
+        || (rpn_string.charAt(i) == '-' && Character.isDigit(rpn_string.charAt(i + 1))))
      {
       //Add on to temp
       temp += rpn_string.charAt(i);
