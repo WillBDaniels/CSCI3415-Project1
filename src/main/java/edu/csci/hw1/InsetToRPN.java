@@ -27,11 +27,6 @@ public class InsetToRPN {
 
         if (inset_string.charAt(0) == '-')
             inset_string = inset_string.replaceFirst("\\-", "!");
-<<<<<<< HEAD
-=======
-        
-        System.out.println("cleaned: " + inset_string);
->>>>>>> 80e11a9aa2ba9ae431296987f26eb0f83e01d583
     }
   
     public void convert() throws Exception {
