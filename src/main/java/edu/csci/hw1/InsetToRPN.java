@@ -24,6 +24,9 @@ public class InsetToRPN {
                                    .replaceAll("\\/\\-", "/!")
                                    .replaceAll("\\-\\(", "!(")
                                    .replaceAll("\\^\\-", "^!");
+
+        if (inset_string.charAt(0) == '-')
+            inset_string = inset_string.replaceFirst("\\-", "!");
     }
   
     public void convert() throws Exception {
