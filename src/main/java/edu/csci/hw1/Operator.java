@@ -1,5 +1,12 @@
 package edu.csci.hw1;
 
+/**
+* This is the class that will handle operator symbols.
+*
+* 08-2014
+*
+*/
+
 public class Operator {
     private int precedence;
     private String symbol;
