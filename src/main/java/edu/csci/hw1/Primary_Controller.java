@@ -1,7 +1,6 @@
 package edu.csci.hw1;
 
 import java.io.File;
-import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;

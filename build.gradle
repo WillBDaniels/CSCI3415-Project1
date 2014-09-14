@@ -7,7 +7,7 @@ apply plugin: 'maven'
 sourceCompatibility = '1.8'
 def mainClassName = "edu.csci.hw1.Calculator"
 def mainAppName = "Simple Java Calculator"
-def versionNumber = "1.0"
+version = "1.0"
 jfxJar.enabled = false;
 jfxCopyLibs.enabled = false;
 
@@ -73,7 +73,6 @@ task copyFinalZip (type: Copy){
 
 task zipEverything(type: Zip){
     baseName = mainAppName
-    classifier = versionNumber
     from 'build/distributions/bundles/'
 }
 

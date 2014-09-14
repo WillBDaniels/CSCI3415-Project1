@@ -1,0 +1,2 @@
+09:20:25.582 [ERROR] [system.err] Note: C:\Users\God\Documents\git\CSCI3415-Project1\src\main\java\edu\csci\hw1\Validation.java uses unchecked or unsafe operations.
+09:20:25.583 [ERROR] [system.err] Note: Recompile with -Xlint:unchecked for details.

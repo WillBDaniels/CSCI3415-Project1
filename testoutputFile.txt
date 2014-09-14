@@ -5,5 +5,6 @@ Result of line 4 :6.0
 Result of line 5 :1.0
 Result of line 6 :24.0
 Result of line 7 :5.0
-Result of line 8 :29.0
+Invalid mathematical expression on line 8
 Result of line 9 :15.0
+Invalid mathematical expression on line 10

@@ -1,0 +1,415 @@
+09:20:16.252 [INFO] [org.gradle.BuildLogger] Starting Build
+09:20:16.254 [DEBUG] [org.gradle.BuildLogger] Gradle user home: C:\Users\God\.gradle
+09:20:16.254 [DEBUG] [org.gradle.BuildLogger] Current dir: C:\Users\God\Documents\git\CSCI3415-Project1
+09:20:16.255 [DEBUG] [org.gradle.BuildLogger] Settings file: null
+09:20:16.255 [DEBUG] [org.gradle.BuildLogger] Build file: null
+09:20:16.273 [DEBUG] [org.gradle.initialization.buildsrc.BuildSourceBuilder] Starting to build the build sources.
+09:20:16.274 [DEBUG] [org.gradle.initialization.buildsrc.BuildSourceBuilder] Gradle source dir does not exist. We leave.
+09:20:16.275 [DEBUG] [org.gradle.initialization.DefaultGradlePropertiesLoader] Found env project properties: []
+09:20:16.276 [DEBUG] [org.gradle.initialization.DefaultGradlePropertiesLoader] Found system project properties: []
+09:20:16.353 [DEBUG] [org.gradle.api.internal.artifacts.mvnsettings.DefaultLocalMavenRepositoryLocator] No local repository in Settings file defined. Using default path: C:\Users\God\.m2\repository
+09:20:16.534 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on buildscript class cache for settings file 'C:\Users\God\Documents\git\CSCI3415-Project1\settings.gradle' (C:\Users\God\.gradle\caches\2.0\scripts\settings_tlb98kc6u1gh38ucm4ggire0c\SettingsScript\buildscript).
+09:20:16.536 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+09:20:16.585 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on no_buildscript class cache for settings file 'C:\Users\God\Documents\git\CSCI3415-Project1\settings.gradle' (C:\Users\God\.gradle\caches\2.0\scripts\settings_tlb98kc6u1gh38ucm4ggire0c\SettingsScript\no_buildscript).
+09:20:16.586 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+09:20:16.618 [DEBUG] [org.gradle.initialization.ScriptEvaluatingSettingsProcessor] Timing: Processing settings took: 0.342 secs
+09:20:16.621 [INFO] [org.gradle.BuildLogger] Settings evaluated using settings file 'C:\Users\God\Documents\git\CSCI3415-Project1\settings.gradle'.
+09:20:16.694 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] Looking for project properties from: C:\Users\God\Documents\git\CSCI3415-Project1\gradle.properties
+09:20:16.695 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] project property file does not exists. We continue!
+09:20:16.696 [INFO] [org.gradle.BuildLogger] Projects loaded. Root project using build file 'C:\Users\God\Documents\git\CSCI3415-Project1\build.gradle'.
+09:20:16.697 [INFO] [org.gradle.BuildLogger] Included projects: [root project 'CSCI3415-HW1']
+09:20:16.978 [INFO] [org.gradle.configuration.project.BuildScriptProcessor] Evaluating root project 'CSCI3415-HW1' using build file 'C:\Users\God\Documents\git\CSCI3415-Project1\build.gradle'.
+09:20:16.984 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on buildscript class cache for build file 'C:\Users\God\Documents\git\CSCI3415-Project1\build.gradle' (C:\Users\God\.gradle\caches\2.0\scripts\build_7572rjlfoith3jppuhq5jadaae\ProjectScript\buildscript).
+09:20:16.985 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+09:20:16.998 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on no_buildscript class cache for build file 'C:\Users\God\Documents\git\CSCI3415-Project1\build.gradle' (C:\Users\God\.gradle\caches\2.0\scripts\build_7572rjlfoith3jppuhq5jadaae\ProjectScript\no_buildscript).
+09:20:16.999 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+09:20:17.018 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on buildscript class cache for script 'C:\Users\God\Documents\git\CSCI3415-Project1\javafx.plugin' (C:\Users\God\.gradle\caches\2.0\scripts\javafx_64n0en9vklqd1fvnlv1nnjl5vm\DefaultScript\buildscript).
+09:20:17.018 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+09:20:17.053 [DEBUG] [org.gradle.api.internal.artifacts.mvnsettings.DefaultLocalMavenRepositoryLocator] No local repository in Settings file defined. Using default path: C:\Users\God\.m2\repository
+09:20:17.127 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on artifact cache (C:\Users\God\.gradle\caches\modules-2).
+09:20:17.128 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+09:20:17.132 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DefaultDependencyResolver] Resolving configuration 'classpath'
+09:20:17.132 [DEBUG] [org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler] Starting file lock listener thread.
+09:20:17.151 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'ivy.default.settings.dir' to 'jar:file:/C:/Users/God/.gradle/wrapper/dists/gradle-2.0-bin/34ooqmq1urnnhvpv2dlmidjcrc/gradle-2.0/lib/plugins/ivy-2.2.0.jar!/org/apache/ivy/core/settings'
+09:20:17.152 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'ivy.basedir' to 'C:\Users\God\Documents\git\CSCI3415-Project1\.'
+09:20:17.153 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'ivy.default.conf.dir' to 'jar:file:/C:/Users/God/.gradle/wrapper/dists/gradle-2.0-bin/34ooqmq1urnnhvpv2dlmidjcrc/gradle-2.0/lib/plugins/ivy-2.2.0.jar!/org/apache/ivy/core/settings'
+09:20:17.249 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.runtime.name' to 'Java(TM) SE Runtime Environment'
+09:20:17.250 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.version' to '25.20-b23'
+09:20:17.250 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.boot.library.path' to 'c:\Program Files\Java\jdk1.8.0_20\jre\bin'
+09:20:17.250 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.vendor' to 'Oracle Corporation'
+09:20:17.250 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vendor.url' to 'http://java.oracle.com/'
+09:20:17.250 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'path.separator' to ';'
+09:20:17.250 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.name' to 'Java HotSpot(TM) 64-Bit Server VM'
+09:20:17.250 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'file.encoding.pkg' to 'sun.io'
+09:20:17.250 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.os.patch.level' to 'Service Pack 1'
+09:20:17.250 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.script' to ''
+09:20:17.251 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.country' to 'US'
+09:20:17.251 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.java.launcher' to 'SUN_STANDARD'
+09:20:17.251 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.specification.name' to 'Java Virtual Machine Specification'
+09:20:17.251 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.dir' to 'C:\Users\God\Documents\git\CSCI3415-Project1'
+09:20:17.252 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.runtime.version' to '1.8.0_20-b26'
+09:20:17.252 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.awt.graphicsenv' to 'sun.awt.Win32GraphicsEnvironment'
+09:20:17.252 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'os.arch' to 'amd64'
+09:20:17.252 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.endorsed.dirs' to 'c:\Program Files\Java\jdk1.8.0_20\jre\lib\endorsed'
+09:20:17.253 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.io.tmpdir' to 'C:\Users\God\AppData\Local\Temp\'
+09:20:17.253 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'line.separator' to '
+'
+09:20:17.253 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'org.gradle.appname' to 'gradlew'
+09:20:17.254 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.specification.vendor' to 'Oracle Corporation'
+09:20:17.254 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.variant' to ''
+09:20:17.254 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'os.name' to 'Windows 7'
+09:20:17.254 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'jna.boot.library.path' to 'C:\Users\God\.gradle\native\jna\win32-amd64'
+09:20:17.255 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.jnu.encoding' to 'Cp1252'
+09:20:17.255 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.library.path' to 'c:\Program Files\Java\jdk1.8.0_20\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\pik\;C:\Python33\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\MiKTeX 2.9\miktex\bin\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\MATLAB\R2014b\runtime\win64;C:\Program Files\MATLAB\R2014b\bin;C:\Program Files\MATLAB\R2013b\runtime\win64;C:\Program Files\MATLAB\R2013b\bin;C:\Program Files\MATLAB\R2012a\runtime\win64;C:\Program Files\MATLAB\R2012a\bin;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files\Perforce;C:\Program Files (x86)\Subversion\bin;C:\Program Files\TortoiseSVN\bin;C:\MinGW\bin;C:\Program Files\jruby-1.7.0.RC2\bin;c:\jruby-1.7.0.RC2\bin;C:\GNUstep\bin;C:\GNUstep\GNUstep\System\Tools;C:\Python27;C:\Python27\Scripts;C:\Program Files\Java\jdk1.7.0_07\bin;C:\Program Files\gradle-1.6\bin\;C:\Program Files (x86)\Vim\Vim73\;C:\Program Files\Perforce\Server;C:\Subversion\bin;C:\Program Files\Sublime Text 3;C:\cygwin\bin;.'
+09:20:17.255 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'http.keepAlive' to 'true'
+09:20:17.255 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.class.version' to '52.0'
+09:20:17.256 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.specification.name' to 'Java Platform API Specification'
+09:20:17.256 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.management.compiler' to 'HotSpot 64-Bit Tiered Compilers'
+09:20:17.256 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'os.version' to '6.1'
+09:20:17.256 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.home' to 'C:\Users\God'
+09:20:17.257 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.timezone' to 'America/Denver'
+09:20:17.257 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.awt.printerjob' to 'sun.awt.windows.WPrinterJob'
+09:20:17.257 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'file.encoding' to 'Cp1252'
+09:20:17.257 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.specification.version' to '1.8'
+09:20:17.257 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.name' to 'God'
+09:20:17.258 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.class.path' to 'C:\Users\God\Documents\git\CSCI3415-Project1\\gradle\wrapper\gradle-wrapper.jar'
+09:20:17.258 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.specification.version' to '1.8'
+09:20:17.258 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.arch.data.model' to '64'
+09:20:17.258 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.java.command' to 'org.gradle.wrapper.GradleWrapperMain clean build --debug'
+09:20:17.258 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.home' to 'c:\Program Files\Java\jdk1.8.0_20\jre'
+09:20:17.258 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.language' to 'en'
+09:20:17.259 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.specification.vendor' to 'Oracle Corporation'
+09:20:17.259 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'awt.toolkit' to 'sun.awt.windows.WToolkit'
+09:20:17.259 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.info' to 'mixed mode'
+09:20:17.259 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.version' to '1.8.0_20'
+09:20:17.259 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.ext.dirs' to 'c:\Program Files\Java\jdk1.8.0_20\jre\lib\ext;C:\Windows\Sun\Java\lib\ext'
+09:20:17.259 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.boot.class.path' to 'c:\Program Files\Java\jdk1.8.0_20\jre\lib\resources.jar;c:\Program Files\Java\jdk1.8.0_20\jre\lib\rt.jar;c:\Program Files\Java\jdk1.8.0_20\jre\lib\sunrsasign.jar;c:\Program Files\Java\jdk1.8.0_20\jre\lib\jsse.jar;c:\Program Files\Java\jdk1.8.0_20\jre\lib\jce.jar;c:\Program Files\Java\jdk1.8.0_20\jre\lib\charsets.jar;c:\Program Files\Java\jdk1.8.0_20\jre\lib\jfr.jar;c:\Program Files\Java\jdk1.8.0_20\jre\classes'
+09:20:17.260 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vendor' to 'Oracle Corporation'
+09:20:17.260 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'file.separator' to '\'
+09:20:17.260 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vendor.url.bug' to 'http://bugreport.sun.com/bugreport/'
+09:20:17.260 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.io.unicode.encoding' to 'UnicodeLittle'
+09:20:17.260 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.cpu.endian' to 'little'
+09:20:17.260 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.desktop' to 'windows'
+09:20:17.260 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.cpu.isalist' to 'amd64'
+09:20:17.291 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] Creating new in-memory cache for repo 'MavenLocal' [87cab8bbd54abb243696cc9c910d1218].
+09:20:17.301 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] Creating new in-memory cache for repo 'BinTray' [e1cb8e07189263f0d6031dea904b9157].
+09:20:17.302 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] Creating new in-memory cache for repo 'CloudBees Snapshot' [c455cdec48b57f0b9fac001f992cc705].
+09:20:17.304 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] Creating new in-memory cache for repo 'ivy' [55b093056dd1873c708f81f1cc42ae10].
+09:20:17.305 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] Creating new in-memory cache for repo 'MavenRepo' [e9d03b7c6586155fbee8fb2de8b5b149].
+09:20:17.345 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration unspecified:unspecified:unspecified(classpath).
+09:20:17.353 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency unspecified:unspecified:unspecified(classpath) -> org.bitbucket.shemnon.javafxplugin:gradle-javafx-plugin:8.1.1(dependency: org.bitbucket.shemnon.javafxplugin#gradle-javafx-plugin;8.1.1 {classpath=[default]})
+09:20:17.355 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.bitbucket.shemnon.javafxplugin:gradle-javafx-plugin:8.1.1
+09:20:17.356 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainDependencyResolver] Attempting to resolve module 'org.bitbucket.shemnon.javafxplugin:gradle-javafx-plugin:8.1.1' using repositories [MavenLocal, BinTray, CloudBees Snapshot, ivy, MavenRepo]
+09:20:17.362 [DEBUG] [org.gradle.api.internal.artifacts.repositories.resolver.DefaultExternalResourceArtifactResolver] Loading file:/C:/Users/God/.m2/repository/org/bitbucket/shemnon/javafxplugin/gradle-javafx-plugin/8.1.1/gradle-javafx-plugin-8.1.1.pom
+09:20:17.364 [DEBUG] [org.gradle.api.internal.artifacts.repositories.resolver.DefaultExternalResourceArtifactResolver] Loading file:/C:/Users/God/.m2/repository/org/bitbucket/shemnon/javafxplugin/gradle-javafx-plugin/8.1.1/gradle-javafx-plugin-8.1.1.jar
+09:20:17.365 [DEBUG] [org.gradle.api.internal.artifacts.repositories.resolver.ExternalResourceResolver] No meta-data file or artifact found for module 'org.bitbucket.shemnon.javafxplugin:gradle-javafx-plugin:8.1.1' in repository 'MavenLocal'.
+09:20:17.378 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache module-metadata.bin (C:\Users\God\.gradle\caches\modules-2\metadata-2.12\module-metadata.bin)
+09:20:17.441 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+09:20:17.458 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.bitbucket.shemnon.javafxplugin:gradle-javafx-plugin:8.1.1' in 'BinTray'
+09:20:17.458 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainDependencyResolver] Using module 'org.bitbucket.shemnon.javafxplugin:gradle-javafx-plugin:8.1.1' from repository 'BinTray'
+09:20:17.459 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.bitbucket.shemnon.javafxplugin:gradle-javafx-plugin:8.1.1(default).
+09:20:17.460 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.bitbucket.shemnon.javafxplugin:gradle-javafx-plugin:8.1.1(default) -> org.jclarion:image4j:0.7(dependency: org.jclarion#image4j;0.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]})
+09:20:17.460 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.jclarion:image4j:0.7
+09:20:17.460 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainDependencyResolver] Attempting to resolve module 'org.jclarion:image4j:0.7' using repositories [MavenLocal, BinTray, CloudBees Snapshot, ivy, MavenRepo]
+09:20:17.460 [DEBUG] [org.gradle.api.internal.artifacts.repositories.resolver.DefaultExternalResourceArtifactResolver] Loading file:/C:/Users/God/.m2/repository/org/jclarion/image4j/0.7/image4j-0.7.pom
+09:20:17.460 [DEBUG] [org.gradle.api.internal.artifacts.repositories.resolver.DefaultExternalResourceArtifactResolver] Loading file:/C:/Users/God/.m2/repository/org/jclarion/image4j/0.7/image4j-0.7.jar
+09:20:17.461 [DEBUG] [org.gradle.api.internal.artifacts.repositories.resolver.ExternalResourceResolver] No meta-data file or artifact found for module 'org.jclarion:image4j:0.7' in repository 'MavenLocal'.
+09:20:17.461 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Detected non-existence of module 'org.jclarion:image4j:0.7' in resolver cache 'BinTray'
+09:20:17.461 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Detected non-existence of module 'org.jclarion:image4j:0.7' in resolver cache 'CloudBees Snapshot'
+09:20:17.462 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Detected non-existence of module 'org.jclarion:image4j:0.7' in resolver cache 'ivy'
+09:20:17.464 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+09:20:17.466 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.jclarion:image4j:0.7' in 'MavenRepo'
+09:20:17.466 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainDependencyResolver] Using module 'org.jclarion:image4j:0.7' from repository 'MavenRepo'
+09:20:17.466 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.jclarion:image4j:0.7(compile).
+09:20:17.467 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.jclarion:image4j:0.7(master).
+09:20:17.467 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.jclarion:image4j:0.7(runtime).
+09:20:17.469 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.ResolvedConfigurationDependencyGraphVisitor] Attaching unspecified:unspecified:unspecified(classpath) to its parents.
+09:20:17.471 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.ResolvedConfigurationDependencyGraphVisitor] Attaching org.bitbucket.shemnon.javafxplugin:gradle-javafx-plugin:8.1.1(default) to its parents.
+09:20:17.477 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.ResolvedConfigurationDependencyGraphVisitor] Attaching org.jclarion:image4j:0.7(compile) to its parents.
+09:20:17.477 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.ResolvedConfigurationDependencyGraphVisitor] Attaching org.jclarion:image4j:0.7(master) to its parents.
+09:20:17.478 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.ResolvedConfigurationDependencyGraphVisitor] Attaching org.jclarion:image4j:0.7(runtime) to its parents.
+09:20:17.478 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.oldresult.TransientConfigurationResultsBuilder] Flushing resolved configuration data in Binary store in C:\Users\God\AppData\Local\Temp\gradle2201523242904538806.bin. Wrote root unspecified:unspecified:unspecified:classpath.
+09:20:17.491 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache artifact-at-repository.bin (C:\Users\God\.gradle\caches\modules-2\metadata-2.12\artifact-at-repository.bin)
+09:20:17.494 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'org.bitbucket.shemnon.javafxplugin:gradle-javafx-plugin:8.1.1:gradle-javafx-plugin.jar' in resolver cache: C:\Users\God\.gradle\caches\modules-2\files-2.1\org.bitbucket.shemnon.javafxplugin\gradle-javafx-plugin\8.1.1\60e665e4cf1bd9e531e87ee918dd3d1572595547\gradle-javafx-plugin-8.1.1.jar
+09:20:17.495 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'org.jclarion:image4j:0.7:image4j.jar' in resolver cache: C:\Users\God\.gradle\caches\modules-2\files-2.1\org.jclarion\image4j\0.7\9721d65eba16bc5b1c32df0a57c17ce2d797fc82\image4j-0.7.jar
+09:20:17.501 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on no_buildscript class cache for script 'C:\Users\God\Documents\git\CSCI3415-Project1\javafx.plugin' (C:\Users\God\.gradle\caches\2.0\scripts\javafx_64n0en9vklqd1fvnlv1nnjl5vm\DefaultScript\no_buildscript).
+09:20:17.501 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+09:20:18.144 [DEBUG] [org.gradle.api.Project] Looking for JavaFX Runtime Jar in jfxrtDir in Gradle Properties
+09:20:18.144 [DEBUG] [org.gradle.api.Project] jfxrtDir in Gradle Properties is .
+09:20:18.149 [DEBUG] [org.gradle.api.Project] Trying .\jfxrt.jar
+09:20:18.150 [DEBUG] [org.gradle.api.Project] Trying .\lib\jfxrt.jar
+09:20:18.151 [DEBUG] [org.gradle.api.Project] Trying .\lib\ext\jfxrt.jar
+09:20:18.151 [DEBUG] [org.gradle.api.Project] Trying .\jre\lib\jfxrt.jar
+09:20:18.151 [DEBUG] [org.gradle.api.Project] Trying .\jre\lib\ext\jfxrt.jar
+09:20:18.151 [DEBUG] [org.gradle.api.Project] Looking for JavaFX Runtime Jar in JFXRT_HOME in System Environment
+09:20:18.155 [DEBUG] [org.gradle.api.Project] JFXRT_HOME in System Environment not set
+09:20:18.155 [DEBUG] [org.gradle.api.Project] Looking for JavaFX Runtime Jar in JAVA_HOME in System Environment
+09:20:18.155 [DEBUG] [org.gradle.api.Project] JAVA_HOME in System Environment is c:\Program Files\Java\jdk1.8.0_20
+09:20:18.155 [DEBUG] [org.gradle.api.Project] Trying c:\Program Files\Java\jdk1.8.0_20\jfxrt.jar
+09:20:18.155 [DEBUG] [org.gradle.api.Project] Trying c:\Program Files\Java\jdk1.8.0_20\lib\jfxrt.jar
+09:20:18.156 [DEBUG] [org.gradle.api.Project] Trying c:\Program Files\Java\jdk1.8.0_20\lib\ext\jfxrt.jar
+09:20:18.156 [DEBUG] [org.gradle.api.Project] Trying c:\Program Files\Java\jdk1.8.0_20\jre\lib\jfxrt.jar
+09:20:18.156 [DEBUG] [org.gradle.api.Project] Trying c:\Program Files\Java\jdk1.8.0_20\jre\lib\ext\jfxrt.jar
+09:20:18.160 [DEBUG] [org.gradle.api.Project] found JavaFX Runtime Jar as null
+09:20:18.160 [INFO] [org.gradle.api.Project] JavaFX Runtime Jar: c:\Program Files\Java\jdk1.8.0_20\jre\lib\ext\jfxrt.jar
+09:20:18.164 [DEBUG] [org.gradle.api.Project] Looking for JavaFX Packager Tools in jfxrtDir in Gradle Properties
+09:20:18.164 [DEBUG] [org.gradle.api.Project] jfxrtDir in Gradle Properties is .
+09:20:18.164 [DEBUG] [org.gradle.api.Project] Trying .\ant-javafx.jar
+09:20:18.165 [DEBUG] [org.gradle.api.Project] Trying .\lib\ant-javafx.jar
+09:20:18.165 [DEBUG] [org.gradle.api.Project] Trying .\..\lib\ant-javafx.jar
+09:20:18.165 [DEBUG] [org.gradle.api.Project] Looking for JavaFX Packager Tools in JFXRT_HOME in System Environment
+09:20:18.165 [DEBUG] [org.gradle.api.Project] JFXRT_HOME in System Environment not set
+09:20:18.165 [DEBUG] [org.gradle.api.Project] Looking for JavaFX Packager Tools in JAVA_HOME in System Environment
+09:20:18.166 [DEBUG] [org.gradle.api.Project] JAVA_HOME in System Environment is c:\Program Files\Java\jdk1.8.0_20
+09:20:18.166 [DEBUG] [org.gradle.api.Project] Trying c:\Program Files\Java\jdk1.8.0_20\ant-javafx.jar
+09:20:18.166 [DEBUG] [org.gradle.api.Project] Trying c:\Program Files\Java\jdk1.8.0_20\lib\ant-javafx.jar
+09:20:18.166 [DEBUG] [org.gradle.api.Project] found JavaFX Packager Tools as null
+09:20:18.166 [INFO] [org.gradle.api.Project] JavaFX Packager Tools: c:\Program Files\Java\jdk1.8.0_20\lib\ant-javafx.jar
+09:20:18.609 [DEBUG] [org.gradle.configuration.project.BuildScriptProcessor] Timing: Running the build script took 1.631 secs
+09:20:18.626 [INFO] [org.gradle.BuildLogger] All projects evaluated.
+09:20:18.663 [DEBUG] [org.gradle.execution.taskgraph.DefaultTaskGraphExecuter] Timing: Creating the DAG took 0.003 secs
+09:20:18.708 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DefaultDependencyResolver] Resolving configuration ':compile'
+09:20:18.709 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] Reusing in-memory cache for repo 'MavenRepo' [e9d03b7c6586155fbee8fb2de8b5b149].
+09:20:18.714 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration :CSCI3415-HW1:1.0(compile).
+09:20:18.714 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.ResolvedConfigurationDependencyGraphVisitor] Attaching :CSCI3415-HW1:1.0(compile) to its parents.
+09:20:18.715 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.oldresult.TransientConfigurationResultsBuilder] Flushing resolved configuration data in Binary store in C:\Users\God\AppData\Local\Temp\gradle2201523242904538806.bin. Wrote root :CSCI3415-HW1:1.0:compile.
+09:20:18.732 [DEBUG] [org.gradle.execution.taskgraph.DefaultTaskGraphExecuter] Timing: Creating the DAG took 0.069 secs
+09:20:18.732 [INFO] [org.gradle.execution.TaskNameResolvingBuildConfigurationAction] Selected primary tasks 'DefaultTaskParameter{taskName='clean',projectPath='null'}', 'DefaultTaskParameter{taskName='build',projectPath='null'}'
+09:20:18.734 [INFO] [org.gradle.BuildLogger] Tasks to be executed: [task ':clean', task ':compileJava', task ':processResources', task ':cssToBin', task ':classes', task ':jar', task ':jfxJar', task ':jfxSignJar', task ':jfxCopyLibs', task ':compilePackageJava', task ':processPackageResources', task ':packageClasses', task ':jfxDeploy', task ':assemble', task ':compileTestJava', task ':processTestResources', task ':testClasses', task ':test', task ':check', task ':zipEverything', task ':copyFinalZip', task ':build']
+09:20:18.735 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :clean (Thread[main,5,main]) started.
+09:20:18.735 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :clean
+09:20:18.748 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':clean'
+09:20:18.749 [DEBUG] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Determining if task ':clean' is up-to-date
+09:20:18.749 [INFO] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Executing task ':clean' (up-to-date check took 0.0 secs) due to:
+  Task has not declared any outputs.
+09:20:18.749 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter] Executing actions for task ':clean'.
+09:20:18.750 [DEBUG] [org.gradle.api.internal.file.copy.DeleteActionImpl] Deleting C:\Users\God\Documents\git\CSCI3415-Project1\build
+09:20:24.373 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':clean'
+09:20:24.374 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :clean (Thread[main,5,main]) completed. Took 5.639 secs.
+09:20:24.374 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :compileJava (Thread[main,5,main]) started.
+09:20:24.374 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :compileJava
+09:20:24.375 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':compileJava'
+09:20:24.383 [DEBUG] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Determining if task ':compileJava' is up-to-date
+09:20:24.385 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on task history cache (C:\Users\God\Documents\git\CSCI3415-Project1\.gradle\2.0\taskArtifacts).
+09:20:24.398 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+09:20:24.399 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache taskArtifacts.bin (C:\Users\God\Documents\git\CSCI3415-Project1\.gradle\2.0\taskArtifacts\taskArtifacts.bin)
+09:20:24.412 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache outputFileStates.bin (C:\Users\God\Documents\git\CSCI3415-Project1\.gradle\2.0\taskArtifacts\outputFileStates.bin)
+09:20:24.423 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache fileHashes.bin (C:\Users\God\Documents\git\CSCI3415-Project1\.gradle\2.0\taskArtifacts\fileHashes.bin)
+09:20:24.442 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache fileSnapshots.bin (C:\Users\God\Documents\git\CSCI3415-Project1\.gradle\2.0\taskArtifacts\fileSnapshots.bin)
+09:20:24.448 [INFO] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Executing task ':compileJava' (up-to-date check took 0.065 secs) due to:
+  Output file C:\Users\God\Documents\git\CSCI3415-Project1\build\dependency-cache has changed.
+  Output file C:\Users\God\Documents\git\CSCI3415-Project1\build\classes\main has changed.
+  Output file C:\Users\God\Documents\git\CSCI3415-Project1\build\classes\main\edu\csci\hw1\InsetToRPN.class has been removed.
+09:20:24.448 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter] Executing actions for task ':compileJava'.
+09:20:24.453 [INFO] [org.gradle.api.internal.changedetection.changes.RebuildIncrementalTaskInputs] All input files are considered out-of-date for incremental task ':compileJava'.
+09:20:24.486 [DEBUG] [org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler] Compiler arguments: -d C:\Users\God\Documents\git\CSCI3415-Project1\build\classes\main -g -classpath C:\Program Files\Java\jdk1.8.0_20\jre\lib\ext\jfxrt.jar C:\Users\God\Documents\git\CSCI3415-Project1\src\main\java\edu\csci\hw1\Calculator.java C:\Users\God\Documents\git\CSCI3415-Project1\src\main\java\edu\csci\hw1\CalculatorScanner.java C:\Users\God\Documents\git\CSCI3415-Project1\src\main\java\edu\csci\hw1\File_Processor.java C:\Users\God\Documents\git\CSCI3415-Project1\src\main\java\edu\csci\hw1\InsetToRPN.java C:\Users\God\Documents\git\CSCI3415-Project1\src\main\java\edu\csci\hw1\Operator.java C:\Users\God\Documents\git\CSCI3415-Project1\src\main\java\edu\csci\hw1\Primary_Controller.java C:\Users\God\Documents\git\CSCI3415-Project1\src\main\java\edu\csci\hw1\Process_Expression.java C:\Users\God\Documents\git\CSCI3415-Project1\src\main\java\edu\csci\hw1\ReadmeWindow.java C:\Users\God\Documents\git\CSCI3415-Project1\src\main\java\edu\csci\hw1\RPN_Eval.java C:\Users\God\Documents\git\CSCI3415-Project1\src\main\java\edu\csci\hw1\Validation.java
+09:20:24.487 [INFO] [org.gradle.api.internal.tasks.compile.jdk6.Jdk6JavaCompiler] Compiling with JDK Java compiler API.
+09:20:25.606 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':compileJava'
+09:20:25.606 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :compileJava (Thread[main,5,main]) completed. Took 1.232 secs.
+09:20:25.606 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :processResources (Thread[main,5,main]) started.
+09:20:25.607 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :processResources
+09:20:25.607 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':processResources'
+09:20:25.612 [DEBUG] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Determining if task ':processResources' is up-to-date
+09:20:25.621 [INFO] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Executing task ':processResources' (up-to-date check took 0.009 secs) due to:
+  Output file C:\Users\God\Documents\git\CSCI3415-Project1\build\resources\main has changed.
+  Output file C:\Users\God\Documents\git\CSCI3415-Project1\build\resources\main\edu\csci\hw1\static_files\readme.txt has been removed.
+  Output file C:\Users\God\Documents\git\CSCI3415-Project1\build\resources\main\edu\csci\hw1\css\primary.css has been removed.
+09:20:25.621 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter] Executing actions for task ':processResources'.
+09:20:25.658 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':processResources'
+09:20:25.658 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :processResources (Thread[main,5,main]) completed. Took 0.051 secs.
+09:20:25.658 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :cssToBin (Thread[main,5,main]) started.
+09:20:25.658 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :cssToBin
+09:20:25.659 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':cssToBin'
+09:20:25.659 [INFO] [org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter] Skipping task ':cssToBin' as task onlyIf is false.
+09:20:25.659 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':cssToBin'
+09:20:25.659 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :cssToBin SKIPPED
+09:20:25.660 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :cssToBin (Thread[main,5,main]) completed. Took 0.002 secs.
+09:20:25.660 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :classes (Thread[main,5,main]) started.
+09:20:25.660 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :classes
+09:20:25.660 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':classes'
+09:20:25.660 [INFO] [org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter] Skipping task ':classes' as it has no actions.
+09:20:25.661 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':classes'
+09:20:25.661 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :classes (Thread[main,5,main]) completed. Took 0.001 secs.
+09:20:25.661 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :jar (Thread[main,5,main]) started.
+09:20:25.661 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :jar
+09:20:25.661 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':jar'
+09:20:25.666 [DEBUG] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Determining if task ':jar' is up-to-date
+09:20:44.743 [INFO] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Executing task ':jar' (up-to-date check took 19.077 secs) due to:
+  Output file C:\Users\God\Documents\git\CSCI3415-Project1\build\libs\CSCI3415-HW1-1.0.jar has changed.
+  Output file C:\Users\God\Documents\git\CSCI3415-Project1\build\libs\CSCI3415-HW1-1.0.jar has been removed.
+09:20:44.743 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter] Executing actions for task ':jar'.
+09:20:48.261 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':jar'
+09:20:48.261 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :jar (Thread[main,5,main]) completed. Took 22.6 secs.
+09:20:48.261 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :jfxJar (Thread[main,5,main]) started.
+09:20:48.261 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :jfxJar
+09:20:48.261 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':jfxJar'
+09:20:48.261 [INFO] [org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter] Skipping task ':jfxJar' as task onlyIf is false.
+09:20:48.262 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':jfxJar'
+09:20:48.262 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :jfxJar SKIPPED
+09:20:48.262 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :jfxJar (Thread[main,5,main]) completed. Took 0.001 secs.
+09:20:48.262 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :jfxSignJar (Thread[main,5,main]) started.
+09:20:48.262 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :jfxSignJar
+09:20:48.262 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':jfxSignJar'
+09:20:48.262 [INFO] [org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter] Skipping task ':jfxSignJar' as task onlyIf is false.
+09:20:48.263 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':jfxSignJar'
+09:20:48.263 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :jfxSignJar SKIPPED
+09:20:48.263 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :jfxSignJar (Thread[main,5,main]) completed. Took 0.001 secs.
+09:20:48.263 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :jfxCopyLibs (Thread[main,5,main]) started.
+09:20:48.263 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :jfxCopyLibs
+09:20:48.263 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':jfxCopyLibs'
+09:20:48.263 [INFO] [org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter] Skipping task ':jfxCopyLibs' as task onlyIf is false.
+09:20:48.263 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':jfxCopyLibs'
+09:20:48.263 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :jfxCopyLibs SKIPPED
+09:20:48.264 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :jfxCopyLibs (Thread[main,5,main]) completed. Took 0.001 secs.
+09:20:48.264 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :compilePackageJava (Thread[main,5,main]) started.
+09:20:48.264 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :compilePackageJava
+09:20:48.264 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':compilePackageJava'
+09:20:48.265 [INFO] [org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter] Skipping task ':compilePackageJava' as it has no source files.
+09:20:48.265 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':compilePackageJava'
+09:20:48.265 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :compilePackageJava UP-TO-DATE
+09:20:48.265 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :compilePackageJava (Thread[main,5,main]) completed. Took 0.001 secs.
+09:20:48.265 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :processPackageResources (Thread[main,5,main]) started.
+09:20:48.265 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :processPackageResources
+09:20:48.265 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':processPackageResources'
+09:20:48.266 [INFO] [org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter] Skipping task ':processPackageResources' as it has no source files.
+09:20:48.266 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':processPackageResources'
+09:20:48.266 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :processPackageResources UP-TO-DATE
+09:20:48.266 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :processPackageResources (Thread[main,5,main]) completed. Took 0.001 secs.
+09:20:48.266 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :packageClasses (Thread[main,5,main]) started.
+09:20:48.267 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :packageClasses
+09:20:48.267 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':packageClasses'
+09:20:48.267 [INFO] [org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter] Skipping task ':packageClasses' as it has no actions.
+09:20:48.267 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':packageClasses'
+09:20:48.267 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :packageClasses UP-TO-DATE
+09:20:48.268 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :packageClasses (Thread[main,5,main]) completed. Took 0.001 secs.
+09:20:48.268 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :jfxDeploy (Thread[main,5,main]) started.
+09:20:48.268 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :jfxDeploy
+09:20:48.268 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':jfxDeploy'
+09:20:48.271 [DEBUG] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Determining if task ':jfxDeploy' is up-to-date
+09:20:48.274 [INFO] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Executing task ':jfxDeploy' (up-to-date check took 0.003 secs) due to:
+  Output file C:\Users\God\Documents\git\CSCI3415-Project1\build\distributions has changed.
+  Output file C:\Users\God\Documents\git\CSCI3415-Project1\build\distributions\Simple Java Calculator\runtime\jre\bin\t2k.dll has been removed.
+  Output file C:\Users\God\Documents\git\CSCI3415-Project1\build\distributions\Simple Java Calculator\runtime\jre\bin\JAWTAccessBridge-64.dll has been removed.
+09:20:48.275 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter] Executing actions for task ':jfxDeploy'.
+09:20:48.428 [INFO] [org.gradle.api.Task] Java runtime to be bundled: the runtime executing the Gradle build
+09:20:48.474 [DEBUG] [sun.awt.windows.WToolkit] Win version: 0x1db10106 = 498139398 (Windows Vista)
+09:20:48.702 [DEBUG] [org.gradle.api.Task] Target bundle type is 'all'
+09:20:48.710 [DEBUG] [org.gradle.api.Task] Considering Windows Application Image which is a 'image' 
+09:20:48.731 [DEBUG] [org.gradle.api.Task] Running [c:\Program Files\Java\jdk1.8.0_20\jre\bin\java, -version]
+09:20:48.806 [DEBUG] [org.gradle.api.Task] Windows Application Image passed validaiton - executing
+09:20:48.807 [INFO] [org.gradle.api.Task] Creating app bundle: Simple Java Calculator in C:\Users\God\Documents\git\CSCI3415-Project1\build\distributions
+09:20:48.825 [DEBUG] [org.gradle.api.Task] Running [C:\Users\God\AppData\Local\Temp\iconswap7538942969173824527.exe, C:\Users\God\AppData\Local\Temp\fxbundler4156884992867445798\windows\Simple Java Calculator.ico, C:\Users\God\Documents\git\CSCI3415-Project1\build\distributions\Simple Java Calculator\Simple Java Calculator.exe]
+09:20:48.830 [DEBUG] [org.gradle.api.Task] Icon File Name: C:\Users\God\AppData\Local\Temp\fxbundler4156884992867445798\windows\Simple Java Calculator.ico
+09:20:48.830 [DEBUG] [org.gradle.api.Task] Executable File Name: C:\Users\God\Documents\git\CSCI3415-Project1\build\distributions\Simple Java Calculator\Simple Java Calculator.exe
+09:20:49.000 [INFO] [org.gradle.api.Task] Result application bundle: C:\Users\God\Documents\git\CSCI3415-Project1\build\distributions
+09:20:49.002 [DEBUG] [org.gradle.api.Task] Considering EXE Installer which is a 'installer' 
+09:20:49.008 [DEBUG] [org.gradle.api.Task] Running [c:\Program Files\Java\jdk1.8.0_20\jre\bin\java, -version]
+09:20:49.071 [INFO] [org.gradle.api.Task] Detected [iscc.exe] version 0 but version 5 is required.
+09:20:49.077 [INFO] [org.gradle.api.Task] Skipping EXE Installer because of configuration error Can not find Inno Setup Compiler (iscc.exe).
+Advice to Fix:   Download Inno Setup 5 or later from http://www.jrsoftware.org and add it to the PATH.
+09:20:49.079 [DEBUG] [org.gradle.api.Task] Considering MSI Installer which is a 'installer' 
+09:20:49.553 [DEBUG] [org.gradle.api.Task] Running [c:\Program Files\Java\jdk1.8.0_20\jre\bin\java, -version]
+09:20:49.658 [DEBUG] [org.gradle.api.Task] Detected [candle.exe] version 0 but version 3 is required.
+09:20:49.658 [DEBUG] [org.gradle.api.Task] Detected [light.exe] version 0 but version 3 is required.
+09:20:49.658 [INFO] [org.gradle.api.Task] Skipping MSI Installer because of configuration error Can not find WiX tools (light.exe, candle.exe).
+Advice to Fix:   Download WiX 3.0 or later from http://wix.sf.net and add it to the PATH.
+09:20:49.660 [DEBUG] [org.gradle.api.Task] Considering Linux Application Image which is a 'image' 
+09:20:49.662 [DEBUG] [org.gradle.api.Task] Considering DEB Installer which is a 'installer' 
+09:20:49.663 [DEBUG] [org.gradle.api.Task] Considering RPM Bundle which is a 'installer' 
+09:20:49.665 [DEBUG] [org.gradle.api.Task] Considering Mac Application Image which is a 'image' 
+09:20:49.667 [DEBUG] [org.gradle.api.Task] Considering DMG Installer which is a 'installer' 
+09:20:49.669 [DEBUG] [org.gradle.api.Task] Considering PKG Installer which is a 'installer' 
+09:20:49.671 [DEBUG] [org.gradle.api.Task] Considering Mac App Store Ready Bundler which is a 'installer' 
+09:20:50.519 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':jfxDeploy'
+09:20:50.519 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :jfxDeploy (Thread[main,5,main]) completed. Took 2.251 secs.
+09:20:50.519 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :assemble (Thread[main,5,main]) started.
+09:20:50.519 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :assemble
+09:20:50.519 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':assemble'
+09:20:50.520 [INFO] [org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter] Skipping task ':assemble' as it has no actions.
+09:20:50.520 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':assemble'
+09:20:50.520 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :assemble (Thread[main,5,main]) completed. Took 0.001 secs.
+09:20:50.520 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :compileTestJava (Thread[main,5,main]) started.
+09:20:50.520 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :compileTestJava
+09:20:50.520 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':compileTestJava'
+09:20:50.521 [INFO] [org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter] Skipping task ':compileTestJava' as it has no source files.
+09:20:50.521 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':compileTestJava'
+09:20:50.521 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :compileTestJava UP-TO-DATE
+09:20:50.522 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :compileTestJava (Thread[main,5,main]) completed. Took 0.002 secs.
+09:20:50.522 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :processTestResources (Thread[main,5,main]) started.
+09:20:50.522 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :processTestResources
+09:20:50.522 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':processTestResources'
+09:20:50.525 [DEBUG] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Determining if task ':processTestResources' is up-to-date
+09:20:50.529 [INFO] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Executing task ':processTestResources' (up-to-date check took 0.004 secs) due to:
+  Output file C:\Users\God\Documents\git\CSCI3415-Project1\build\resources\test has changed.
+  Output file C:\Users\God\Documents\git\CSCI3415-Project1\build\resources\test\edu\csci\hw1\fxml\primary_window.fxml has been removed.
+  Output file C:\Users\God\Documents\git\CSCI3415-Project1\build\resources\test\edu\csci\hw1\css\primary.css has been removed.
+09:20:50.529 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter] Executing actions for task ':processTestResources'.
+09:20:50.540 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':processTestResources'
+09:20:50.541 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :processTestResources (Thread[main,5,main]) completed. Took 0.019 secs.
+09:20:50.541 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :testClasses (Thread[main,5,main]) started.
+09:20:50.541 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :testClasses
+09:20:50.541 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':testClasses'
+09:20:50.541 [INFO] [org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter] Skipping task ':testClasses' as it has no actions.
+09:20:50.541 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':testClasses'
+09:20:50.541 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :testClasses (Thread[main,5,main]) completed. Took 0.0 secs.
+09:20:50.541 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :test (Thread[main,5,main]) started.
+09:20:50.541 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :test
+09:20:50.541 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':test'
+09:20:50.542 [INFO] [org.gradle.api.internal.file.collections.DirectoryFileTree] file or directory 'C:\Users\God\Documents\git\CSCI3415-Project1\build\classes\test', not found
+09:20:50.542 [INFO] [org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter] Skipping task ':test' as it has no source files.
+09:20:50.542 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':test'
+09:20:50.542 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :test UP-TO-DATE
+09:20:50.542 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :test (Thread[main,5,main]) completed. Took 0.001 secs.
+09:20:50.543 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :check (Thread[main,5,main]) started.
+09:20:50.543 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :check
+09:20:50.543 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':check'
+09:20:50.543 [INFO] [org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter] Skipping task ':check' as it has no actions.
+09:20:50.543 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':check'
+09:20:50.543 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :check UP-TO-DATE
+09:20:50.543 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :check (Thread[main,5,main]) completed. Took 0.0 secs.
+09:20:50.544 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :zipEverything (Thread[main,5,main]) started.
+09:20:50.544 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :zipEverything
+09:20:50.544 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':zipEverything'
+09:20:50.544 [INFO] [org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter] Skipping task ':zipEverything' as it has no source files.
+09:20:50.545 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':zipEverything'
+09:20:50.545 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :zipEverything UP-TO-DATE
+09:20:50.545 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :zipEverything (Thread[main,5,main]) completed. Took 0.001 secs.
+09:20:50.545 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :copyFinalZip (Thread[main,5,main]) started.
+09:20:50.545 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :copyFinalZip
+09:20:50.545 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':copyFinalZip'
+09:20:50.546 [INFO] [org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter] Skipping task ':copyFinalZip' as it has no source files.
+09:20:50.547 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':copyFinalZip'
+09:20:50.547 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :copyFinalZip UP-TO-DATE
+09:20:50.547 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :copyFinalZip (Thread[main,5,main]) completed. Took 0.002 secs.
+09:20:50.547 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :build (Thread[main,5,main]) started.
+09:20:50.547 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :build
+09:20:50.547 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':build'
+09:20:50.547 [INFO] [org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter] Skipping task ':build' as it has no actions.
+09:20:50.548 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':build'
+09:20:50.548 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :build (Thread[main,5,main]) completed. Took 0.001 secs.
+09:20:50.548 [DEBUG] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] Task worker [Thread[main,5,main]] finished, busy: 31.809 secs, idle: 0.004 secs
+09:20:50.548 [DEBUG] [org.gradle.execution.taskgraph.DefaultTaskGraphExecuter] Timing: Executing the DAG took 31.815 secs
+09:20:50.550 [LIFECYCLE] [org.gradle.BuildResultLogger] 
+09:20:50.551 [LIFECYCLE] [org.gradle.BuildResultLogger] BUILD SUCCESSFUL
+09:20:50.552 [LIFECYCLE] [org.gradle.BuildResultLogger] 
+09:20:50.552 [LIFECYCLE] [org.gradle.BuildResultLogger] Total time: 35.396 secs
+09:20:50.554 [DEBUG] [org.gradle.api.internal.tasks.compile.daemon.CompilerDaemonManager] Stopping 0 compiler daemon(s).
+09:20:50.554 [INFO] [org.gradle.api.internal.tasks.compile.daemon.CompilerDaemonManager] Stopped 0 compiler daemon(s).
+09:20:50.556 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-metadata.bin (C:\Users\God\.gradle\caches\modules-2\metadata-2.12\module-metadata.bin)
+09:20:50.556 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache artifact-at-repository.bin (C:\Users\God\.gradle\caches\modules-2\metadata-2.12\artifact-at-repository.bin)
+09:20:50.557 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on artifact cache (C:\Users\God\.gradle\caches\modules-2).
+09:20:50.558 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for settings file 'C:\Users\God\Documents\git\CSCI3415-Project1\settings.gradle' (C:\Users\God\.gradle\caches\2.0\scripts\settings_tlb98kc6u1gh38ucm4ggire0c\SettingsScript\buildscript).
+09:20:50.558 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for settings file 'C:\Users\God\Documents\git\CSCI3415-Project1\settings.gradle' (C:\Users\God\.gradle\caches\2.0\scripts\settings_tlb98kc6u1gh38ucm4ggire0c\SettingsScript\no_buildscript).
+09:20:50.558 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for build file 'C:\Users\God\Documents\git\CSCI3415-Project1\build.gradle' (C:\Users\God\.gradle\caches\2.0\scripts\build_7572rjlfoith3jppuhq5jadaae\ProjectScript\buildscript).
+09:20:50.558 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for build file 'C:\Users\God\Documents\git\CSCI3415-Project1\build.gradle' (C:\Users\God\.gradle\caches\2.0\scripts\build_7572rjlfoith3jppuhq5jadaae\ProjectScript\no_buildscript).
+09:20:50.558 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on buildscript class cache for script 'C:\Users\God\Documents\git\CSCI3415-Project1\javafx.plugin' (C:\Users\God\.gradle\caches\2.0\scripts\javafx_64n0en9vklqd1fvnlv1nnjl5vm\DefaultScript\buildscript).
+09:20:50.559 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on no_buildscript class cache for script 'C:\Users\God\Documents\git\CSCI3415-Project1\javafx.plugin' (C:\Users\God\.gradle\caches\2.0\scripts\javafx_64n0en9vklqd1fvnlv1nnjl5vm\DefaultScript\no_buildscript).
+09:20:50.567 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache outputFileStates.bin (C:\Users\God\Documents\git\CSCI3415-Project1\.gradle\2.0\taskArtifacts\outputFileStates.bin)
+09:20:50.567 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache taskArtifacts.bin (C:\Users\God\Documents\git\CSCI3415-Project1\.gradle\2.0\taskArtifacts\taskArtifacts.bin)
+09:20:50.567 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileHashes.bin (C:\Users\God\Documents\git\CSCI3415-Project1\.gradle\2.0\taskArtifacts\fileHashes.bin)
+09:20:50.567 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileSnapshots.bin (C:\Users\God\Documents\git\CSCI3415-Project1\.gradle\2.0\taskArtifacts\fileSnapshots.bin)
+09:20:50.567 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on task history cache (C:\Users\God\Documents\git\CSCI3415-Project1\.gradle\2.0\taskArtifacts).
+09:20:50.568 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] In-memory dependency metadata cache closed. Repos cached: 6, cache instances: 5, modules served from cache: 0, artifacts: 0
+09:20:50.569 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory] Resolution result cache closed. Cache reads: 0, disk reads: 0 (avg: 0.0 secs, total: 0.0 secs)
+09:20:50.569 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory] Resolved configuration cache closed. Cache reads: 0, disk reads: 0 (avg: 0.0 secs, total: 0.0 secs)
+09:20:50.569 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.ResolutionResultsStoreFactory] Deleted 2 resolution results binary files in 0.0 secs
