@@ -105,7 +105,12 @@ public class Validation {
             //Handle the case where the last character typed was a + or -, but it was in front of a number, 
             //so the form of something like 2+
         } else if ((lastChar.equals("+") || lastChar.equals("-")) && !((secondToLast.equals("+") || (secondToLast.equals("-"))))) {
-            return newItem.equals("+") || newItem.equals("-") || isNumeric(newItem) || newItem.equals("(");
+            if (isNumeric(secondToLast)){
+                return newItem.equals("+") || newItem.equals("-") || isNumeric(newItem) || newItem.equals("(");
+            }else{
+                return isNumeric(newItem) || newItem.equals("(");
+
+            }
         }
 
         //Check to see if the character immediately after an opening paren is either
@@ -113,7 +118,7 @@ public class Validation {
         //so 2+4+(4 would be valid up to this point, or 2+4+((((4 would be valid, but 
         //2+4+(+4 would not be valid. 
         if (lastChar.equals("(")) {
-            if (newItem.equals("(") || newItem.equals("-")) {
+            if (newItem.equals("(") || newItem.equals("-") || newItem.equals("+")) {
                 return true;
             } else {
                 return isNumeric(newItem);
