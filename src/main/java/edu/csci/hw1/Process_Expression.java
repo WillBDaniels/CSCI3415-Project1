@@ -32,6 +32,10 @@ public class Process_Expression {
             converter.inset(inputExpression);
             converter.convert();
             String rpn_out = converter.getRPNString();
+            
+            //For Debugging
+            System.out.println("Inset: " + converter.getInsetString());
+            System.out.println("RPN: " + converter.getRPNString());
         
             //Create new Reverse Polish Notation Evaluator
             RPN_Eval eval = new RPN_Eval(rpn_out);

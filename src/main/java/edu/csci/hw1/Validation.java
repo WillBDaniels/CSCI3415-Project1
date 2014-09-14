@@ -108,12 +108,12 @@ public class Validation {
             return newItem.equals("+") || newItem.equals("-") || isNumeric(newItem) || newItem.equals("(");
         }
 
-        //Check to see if the character immediately aftre an opening paren is either
+        //Check to see if the character immediately after an opening paren is either
         //another opening paren, or a number, the only two types of valid input. 
         //so 2+4+(4 would be valid up to this point, or 2+4+((((4 would be valid, but 
         //2+4+(+4 would not be valid. 
         if (lastChar.equals("(")) {
-            if (newItem.equals("(")) {
+            if (newItem.equals("(") || newItem.equals("-") || newItem.equals("+")) {
                 return true;
             } else {
                 return isNumeric(newItem);
