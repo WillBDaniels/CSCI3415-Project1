@@ -113,7 +113,7 @@ public class Validation {
         //so 2+4+(4 would be valid up to this point, or 2+4+((((4 would be valid, but 
         //2+4+(+4 would not be valid. 
         if (lastChar.equals("(")) {
-            if (newItem.equals("(") || newItem.equals("-") || newItem.equals("+")) {
+            if (newItem.equals("(") || newItem.equals("-")) {
                 return true;
             } else {
                 return isNumeric(newItem);
