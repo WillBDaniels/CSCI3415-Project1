@@ -23,6 +23,8 @@ public class InsetToRPN {
                                    .replaceAll("\\+-", "-")
                                    .replaceAll("-\\+", "-")
                                    .replaceAll("\\+\\+", "+")
+                                   .replaceAll("\\*\\+", "*")
+                                   .replaceAll("\\/\\+", "/")
                                    .replaceAll("\\*\\-", "*!")
                                    .replaceAll("\\/\\-", "/!")
                                    .replaceAll("\\^\\-", "^!")
