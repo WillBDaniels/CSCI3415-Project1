@@ -133,6 +133,7 @@ public class Validation {
         return newItem.equals(")") || isNumeric(newItem);
     }
 
+    
     /**
      * This method counts the number of parenthesis in the program, and if the
      * number of left parenthesis is greater than the number of right
@@ -202,7 +203,7 @@ public class Validation {
      * @param str the String being input by the program.
      * @return true if the string is numeric entirely, false otherwise.
      */
-    private boolean isNumeric(String str) {
+    public boolean isNumeric(String str) {
         return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
     }
 }

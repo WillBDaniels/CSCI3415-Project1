@@ -165,8 +165,9 @@ public class Primary_Controller {
                 if (valid.validateKeyStroke(temp) && valid.validateOrder(tf_expression.getText(), output)){
                     tf_expression.setText(tf_expression.getText() + output);
                 }
-
-                if (!valid.parenMatcher(tf_expression.getText())){
+                String lastDigit = tf_expression.getText().substring(tf_expression.getText().length()-1);
+                if (!valid.parenMatcher(tf_expression.getText()) 
+                        || (!valid.isNumeric(lastDigit) && !lastDigit.equals(")"))){
                     tf_expression.getStyleClass().removeAll("good", "bad");
                     tf_expression.getStyleClass().addAll("bad");
                 }else{
@@ -204,8 +205,12 @@ public class Primary_Controller {
     @FXML
     private void equal_pressed() {
       if (!tf_expression.getStyleClass().contains("bad")){
-          Process_Expression expression = new Process_Expression();
-          double outputValue = expression.calculate_result(tf_expression.getText());
+          String exp = tf_expression.getText();
+          if (exp.startsWith("+")){
+              exp = exp.substring(1);
+          }
+          Process_Expression expressionBuilder = new Process_Expression();
+          double outputValue = expressionBuilder.calculate_result(exp);
           if (outputValue == 9999999999.0){
               tf_result.setText("Not a Number (NaN)");
           }else if (outputValue == -9999999999.0){
