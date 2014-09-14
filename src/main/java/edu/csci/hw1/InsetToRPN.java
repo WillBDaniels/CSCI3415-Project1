@@ -2,8 +2,11 @@ package edu.csci.hw1;
 
 import java.util.Stack;
 
-/*
-  This is the class that will handle converting inset to RPN.
+/**
+* This is the class that will handle converting inset to RPN.
+*
+* 08-2014
+* @author Michael Hunsinger
 */
 
 public class InsetToRPN {

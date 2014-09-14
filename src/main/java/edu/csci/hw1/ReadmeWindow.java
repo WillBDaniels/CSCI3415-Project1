@@ -29,7 +29,7 @@ public class ReadmeWindow {
             try (InputStreamReader isr = new InputStreamReader(getClass().getResourceAsStream("static_files/readme.txt"));
                     BufferedReader br = new BufferedReader(isr)) {
                 while ((temp = br.readLine()) != null){
-                    inputText += temp;
+                    inputText += temp + "\n";
                 }
             }
         }catch(IOException e){
@@ -40,8 +40,8 @@ public class ReadmeWindow {
         pane.getChildren().addAll(ta);
         Scene scene = new Scene(pane);
         ta.setPrefHeight(containerStage.getHeight());
-        ta.setPrefWidth(containerStage.getWidth());
-        stage.setWidth(containerStage.getWidth());
+        ta.setPrefWidth(containerStage.getWidth() * 2);
+        stage.setWidth(containerStage.getWidth() * 2);
         stage.setHeight(containerStage.getHeight());
         stage.getIcons().add(new Image(getClass().getResourceAsStream("images/icon256.png")));
         stage.setScene(scene);

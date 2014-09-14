@@ -1,0 +1,9 @@
+Result of line 1 :6.0
+Result of line 2 :0.0
+Result of line 3 :6002.0
+Result of line 4 :6.0
+Result of line 5 :1.0
+Result of line 6 :24.0
+Result of line 7 :0.0
+Result of line 8 :0.0
+Result of line 9 :15.0

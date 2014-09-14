@@ -4,6 +4,14 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 
+/**
+ * This class is used to capture inputs when the user is entering 
+ * expressions through the GUI.
+ *
+ * 08-2014
+ *
+ */
+
 public class CalculatorScanner {
 
     public Scanner scanner;
