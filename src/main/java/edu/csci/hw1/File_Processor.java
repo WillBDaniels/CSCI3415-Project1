@@ -76,7 +76,6 @@ public class File_Processor {
                     while((item = br.readLine()) != null){
                         if (valid.validateEntireString(item)){
                             output = pex.calculate_result(item);
-                            
                             if (output == 9999999999.0){
                                 thingToWrite = "Not a Number(NaN)";
                             }else if (output == -9999999999.0){

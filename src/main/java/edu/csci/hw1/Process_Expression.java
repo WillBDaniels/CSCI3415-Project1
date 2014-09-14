@@ -27,13 +27,11 @@ public class Process_Expression {
         double answer = 0;
         
         try {
-            System.out.println("This is the inputExpression: " + inputExpression);
             //Convert result to RPN
             InsetToRPN converter = new InsetToRPN();
             converter.inset(inputExpression);
             converter.convert();
             String rpn_out = converter.getRPNString();
-            System.out.println("This is the rpn_out: " + rpn_out);
         
             //Create new Reverse Polish Notation Evaluator
             RPN_Eval eval = new RPN_Eval(rpn_out);

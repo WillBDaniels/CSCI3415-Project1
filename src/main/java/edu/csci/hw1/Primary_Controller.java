@@ -427,12 +427,8 @@ public class Primary_Controller {
      */
     @FXML
     private void load_help(){
-        try {
-            Runtime.getRuntime().exec("notepad.exe static_files/Readme.txt");
-        } catch (IOException ex) {
-            ex.printStackTrace(System.err);
-        }
-
+        ReadmeWindow rw = new ReadmeWindow();
+        rw.show_readme(Calculator.get_stage());
     }
     
     /**

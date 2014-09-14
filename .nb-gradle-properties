@@ -5,5 +5,8 @@
     <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
       <word>regex</word>
     </spellchecker-wordlist>
+    <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+      <word>javafx</word>
+    </spellchecker-wordlist>
   </auxiliary>
 </gradle-project-properties>

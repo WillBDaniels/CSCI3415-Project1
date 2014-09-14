@@ -17,3 +17,7 @@
     -fx-font-weight: bold;
     -fx-font-size: 18px;
 }
+
+.text-area > .content{
+    -fx-text-fill:wheat;
+}
