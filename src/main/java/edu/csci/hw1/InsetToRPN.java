@@ -25,7 +25,7 @@ public class InsetToRPN {
                                    .replaceAll("\\+\\+", "+")
                                    .replaceAll("\\*\\-", "*!")
                                    .replaceAll("\\/\\-", "/!")
-                                   .replaceAll("\\-\\(", "!(")
+                                   
                                    .replaceAll("\\^\\-", "^!");
 
         if (inset_string.charAt(0) == '-')
